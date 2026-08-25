@@ -95,7 +95,7 @@ nav {
   left: 0;
   right: 0;
 
-  background: rgba(248,249,252,.82);
+  background: #FFFFFF;
   backdrop-filter: blur(6px);
 
   border-bottom: 1px solid rgba(255,255,255,0.08);
@@ -120,7 +120,7 @@ nav {
 }
 
 .nav-link {
-  color: #4B5563;
+  color: #0D0D0D;
   font-size: 0.96rem;
   font-weight: 600;
   text-decoration: none;

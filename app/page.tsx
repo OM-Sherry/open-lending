@@ -136,24 +136,24 @@ export default function HomePage() {
   </div>
 )}
 
-      {/* HERO */}
-      <section
-        className="hero"
-        style={{
-          paddingTop: 72,
-          minHeight: "88vh",
-          backgroundImage: `
-            linear-gradient(
-              rgba(10,10,25,0.35),
-              rgba(10,10,25,0.35)
-            ),
-            url("https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=1600&q=80")
-          `,
-          backgroundSize: "cover",
-          backgroundPosition: "65% center",
-          backgroundRepeat: "no-repeat",
-        }}
-      >
+     {/* HERO */}
+<section
+  className="hero"
+  style={{
+    paddingTop: 72,
+    minHeight: "88vh",
+    backgroundImage: `
+      linear-gradient(
+        rgba(10,10,25,0.35),
+        rgba(10,10,25,0.35)
+      ),
+      url("/images/about/house.jpg")
+    `,
+    backgroundSize: "cover",
+    backgroundPosition: "65% center",
+    backgroundRepeat: "no-repeat",
+  }}
+>
         <div className="orb" style={{ width: 600, height: 600, top: -200, right: -200 }} />
 
         <div className="container hero-content" style={{ paddingTop: '4rem', paddingBottom: '5rem' }}>
@@ -171,8 +171,8 @@ export default function HomePage() {
                 maxWidth: 620,
                 padding: "2.5rem",
                 borderRadius: "18px",
-                background: "rgba(18,18,25,0.20)",
-                backdropFilter: "blur(3px)",
+                background: "rgba(10, 10, 20, 0.55)",
+                backdropFilter: "blur(6px)",
                 border: "1px solid rgba(255,255,255,0.12)",
                 boxShadow: "0 10px 30px rgba(0,0,0,.15)",
               }}
