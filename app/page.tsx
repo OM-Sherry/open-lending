@@ -136,124 +136,116 @@ export default function HomePage() {
   </div>
 )}
 
-     {/* HERO */}
-<section
-  className="hero"
-  style={{
-    paddingTop: 72,
-    minHeight: "88vh",
-    backgroundImage: `
-      linear-gradient(
-        rgba(10,10,25,0.35),
-        rgba(10,10,25,0.35)
-      ),
-      url("/images/about/house.jpg")
-    `,
-    backgroundSize: "cover",
-    backgroundPosition: "65% center",
-    backgroundRepeat: "no-repeat",
-  }}
->
-        <div className="orb" style={{ width: 600, height: 600, top: -200, right: -200 }} />
+{/* HERO */}
+<section className="process-hero">
+  {/* Animated background layers */}
+  <div className="process-aurora process-aurora-one" />
+  <div className="process-aurora process-aurora-two" />
+  <div className="process-grid-bg" />
 
-        <div className="container hero-content" style={{ paddingTop: '4rem', paddingBottom: '5rem' }}>
-          <div
-            style={{
-              display: 'grid',
-              gridTemplateColumns: '1fr 1fr',
-              gap: '4rem',
-              alignItems: 'center',
-            }}
-          >
-            {/* Left: Text */}
-            <div
-              style={{
-                maxWidth: 620,
-                padding: "2.5rem",
-                borderRadius: "18px",
-                background: "rgba(10, 10, 20, 0.55)",
-                backdropFilter: "blur(6px)",
-                border: "1px solid rgba(255,255,255,0.12)",
-                boxShadow: "0 10px 30px rgba(0,0,0,.15)",
-              }}
-            >
-              <div className="hero-eyebrow">OPENING MORE POSSIBILITIES</div>
+  {/* Floating particles */}
+  <div className="process-particles" aria-hidden="true">
+    {Array.from({ length: 18 }).map((_, index) => (
+      <span
+        key={index}
+        style={{
+          left: `${(index * 17) % 100}%`,
+          top: `${(index * 29) % 100}%`,
+          animationDelay: `${(index % 9) * -1.2}s`,
+          animationDuration: `${10 + (index % 6) * 2}s`,
+        }}
+      />
+    ))}
+  </div>
 
-              <h1
-                className="display"
+  <div className="container process-hero-content" style={{ paddingTop: '4rem', paddingBottom: '5rem' }}>
+    <div
+      style={{
+        display: 'grid',
+        gridTemplateColumns: '1fr 1fr',
+        gap: '4rem',
+        alignItems: 'center',
+      }}
+    >
+      {/* Left: Text */}
+      <div style={{ maxWidth: 620 }}>
+        <div className="hero-eyebrow">OPEN LENDING</div>
+
+        <h1
+          className="display"
+          style={{
+            color: "#fff",
+            marginBottom: "1.5rem",
+            lineHeight: 1.05,
+          }}
+        >
+          Opening More
+          <br />
+          <span style={{ color: "#8F6BFF" }}>Possibilities</span>
+        </h1>
+
+        <p
+          style={{
+            color: "rgba(255,255,255,0.88)",
+            fontSize: "1.15rem",
+            lineHeight: 1.8,
+            maxWidth: 500,
+            marginBottom: "2.5rem",
+          }}
+        >
+          Structured lending advice, lender matching, and end-to-end support from assessment to settlement.
+        </p>
+
+        <div className="hero-btns">
+          <Link href="/contact" className="btn-primary">
+            Free Consultation <ArrowRight size={16} />
+          </Link>
+
+          <Link href="/process" className="btn-outline-white">See Our Process</Link>
+        </div>
+
+        <div
+          style={{
+            display: "flex",
+            gap: "3rem",
+            marginTop: "3.5rem",
+            flexWrap: "wrap",
+          }}
+        >
+          {[
+            { num: "1500+", label: "Loans Settled" },
+            { num: "$400M+", label: "Funds Placed" },
+            { num: "100+", label: "Lender Panel" },
+          ].map((s) => (
+            <div key={s.label}>
+              <div
                 style={{
+                  fontSize: "2rem",
+                  fontWeight: 800,
                   color: "#fff",
-                  marginBottom: "1.5rem",
-                  lineHeight: 1.05,
                 }}
               >
-                Open Your
-                <br />
-                <span style={{ color: "#8F6BFF" }}>Dream Home</span>
-              </h1>
-
-              <p
-                style={{
-                  color: "rgba(255,255,255,0.88)",
-                  fontSize: "1.15rem",
-                  lineHeight: 1.8,
-                  maxWidth: 500,
-                  marginBottom: "2.5rem",
-                }}
-              >
-                Structured lending advice, lender matching, and end-to-end support from assessment to settlement.
-              </p>
-
-              <div className="hero-btns">
-                <Link href="/contact" className="btn-primary">
-                  Free Consultation <ArrowRight size={16} />
-                </Link>
-
-                <Link href="/process" className="btn-outline-white">See Our Process</Link>
+                {s.num}
               </div>
 
               <div
                 style={{
-                  display: "flex",
-                  gap: "3rem",
-                  marginTop: "3.5rem",
-                  flexWrap: "wrap",
+                  fontSize: "0.85rem",
+                  color: "rgba(255,255,255,0.75)",
+                  marginTop: 4,
                 }}
               >
-                {[
-                  { num: "500+", label: "Loans Settled" },
-                  { num: "$200M+", label: "Funds Placed" },
-                  { num: "50+", label: "Lender Panel" },
-                ].map((s) => (
-                  <div key={s.label}>
-                    <div
-                      style={{
-                        fontSize: "2rem",
-                        fontWeight: 800,
-                        color: "#fff",
-                      }}
-                    >
-                      {s.num}
-                    </div>
-
-                    <div
-                      style={{
-                        fontSize: "0.85rem",
-                        color: "rgba(255,255,255,0.75)",
-                        marginTop: 4,
-                      }}
-                    >
-                      {s.label}
-                    </div>
-                  </div>
-                ))}
+                {s.label}
               </div>
             </div>
-
-            <div />
-          </div>
+          ))}
         </div>
-      </section>
+      </div>
+
+      <div />
+    </div>
+  </div>
+</section>
 
       {/* WELCOME */}
       <section className="section stripe-accent" style={{ background: 'var(--white)' }}>
@@ -579,7 +571,7 @@ export default function HomePage() {
       <div>
         <div
           style={{
-            color: '#93B4FF',
+            color: '#8F6BFF',
             fontSize: '0.8rem',
             fontWeight: 600,
             letterSpacing: '0.1em',

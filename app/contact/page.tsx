@@ -42,24 +42,25 @@ export default function ContactPage() {
       <Navbar />
 
       {/* HERO */}
-      <section style={{
-        background: 'linear-gradient(135deg, var(--navy) 0%, #0D2347 60%, #1B3A6B 100%)',
-        paddingTop: 'calc(72px + 4rem)', paddingBottom: '4rem', position: 'relative', overflow: 'hidden'
-      }}>
-        <div style={{ position: 'absolute', top: -100, right: -100, width: 450, height: 450, borderRadius: '50%', background: 'radial-gradient(circle, rgba(59,111,255,0.2) 0%, transparent 70%)', pointerEvents: 'none' }} />
-        <div className="container" style={{ position: 'relative', zIndex: 1 }}>
-          <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '1.5rem' }}>
-            <Link href="/" style={{ color: 'rgba(255,255,255,0.45)', fontSize: '0.85rem', textDecoration: 'none' }}>Home</Link>
-            <ChevronRight size={14} color="rgba(255,255,255,0.3)" />
-            <span style={{ color: '#93B4FF', fontSize: '0.85rem' }}>Contact Us</span>
-          </div>
-          <div className="pill" style={{ marginBottom: '1.25rem' }}>📞 Get In Touch</div>
-          <h1 className="heading-1" style={{ color: 'white', marginBottom: '0.75rem' }}>Let's talk about your lending goals</h1>
-          <p style={{ color: 'rgba(255,255,255,0.65)', fontSize: '1.05rem', maxWidth: 520, lineHeight: 1.75 }}>
-            Book a free strategy call or send us a message. Our team typically responds within one business day.
-          </p>
-        </div>
-      </section>
+<section style={{
+  background: 'linear-gradient(135deg, var(--navy) 0%, #1A0F2E 60%, #3D1F6B 100%)',
+  paddingTop: 'calc(72px + 4rem)', paddingBottom: '4rem', position: 'relative', overflow: 'hidden'
+}}>
+  <div style={{ position: 'absolute', top: -100, right: -100, width: 450, height: 450, borderRadius: '50%', background: 'radial-gradient(circle, rgba(155,85,233,0.2) 0%, transparent 70%)', pointerEvents: 'none' }} />
+  <div className="container" style={{ position: 'relative', zIndex: 1 }}>
+    <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '1.5rem' }}>
+      <Link href="/" style={{ color: 'rgba(255,255,255,0.45)', fontSize: '0.85rem', textDecoration: 'none' }}>Home</Link>
+      <ChevronRight size={14} color="rgba(255,255,255,0.3)" />
+      <span style={{ color: '#8F6BFF', fontSize: '0.85rem' }}>Contact Us</span>
+    </div>
+    <div className="pill" style={{ marginBottom: '1.25rem' }}>📞 Get In Touch</div>
+    <h1 className="heading-1" style={{ color: 'white', marginBottom: '0.75rem' }}>Let's talk about your lending goals</h1>
+    <p style={{ color: 'rgba(255,255,255,0.65)', fontSize: '1.05rem', maxWidth: 520, lineHeight: 1.75 }}>
+      Book a free strategy call or send us a message. Our team typically responds within one business day.
+    </p>
+  </div>
+</section>
+      
 
       {/* MAIN CONTENT */}
       <section className="section" style={{ background: 'var(--gray)' }}>
@@ -172,7 +173,7 @@ export default function ContactPage() {
 
               {/* Free promise */}
               <div style={{ background: 'linear-gradient(135deg, var(--navy) 0%, #1B3A6B 100%)', borderRadius: '1rem', padding: '1.75rem' }}>
-                <div style={{ color: '#93B4FF', fontWeight: 700, fontSize: '0.85rem', letterSpacing: '0.08em', textTransform: 'uppercase', marginBottom: '0.75rem' }}>Our Promise</div>
+                <div style={{ color: '#8F6BFF', fontWeight: 700, fontSize: '0.85rem', letterSpacing: '0.08em', textTransform: 'uppercase', marginBottom: '0.75rem' }}>Our Promise</div>
                 <p style={{ color: 'rgba(255,255,255,0.85)', fontSize: '0.95rem', lineHeight: 1.7 }}>
                   The initial strategy call is completely free. No sales pressure, no obligation. We give you honest advice whether or not you choose to work with us.
                 </p>
