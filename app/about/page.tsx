@@ -56,13 +56,13 @@ export default function AboutPage() {
     <>
       <Navbar />
 
-     {/* HERO */}
+{/* HERO */}
 <section style={{
-  background: 'linear-gradient(135deg, var(--navy) 0%, #1A0F2E 60%, #3D1F6B 100%)',
+  background: 'linear-gradient(135deg, var(--navy) 0%, #0D2347 60%, #1B3A6B 100%)',
   paddingTop: 'calc(72px + 5rem)', paddingBottom: '5rem', position: 'relative', overflow: 'hidden'
 }}>
-  <div style={{ position: 'absolute', top: -100, right: -100, width: 500, height: 500, borderRadius: '50%', background: 'radial-gradient(circle, rgba(155,85,233,0.2) 0%, transparent 70%)', pointerEvents: 'none' }} />
-  <div style={{ position: 'absolute', bottom: -80, left: -60, width: 300, height: 300, borderRadius: '50%', background: 'radial-gradient(circle, rgba(123,53,201,0.15) 0%, transparent 70%)', pointerEvents: 'none' }} />
+  <div style={{ position: 'absolute', top: -100, right: -100, width: 500, height: 500, borderRadius: '50%', background: 'radial-gradient(circle, rgba(59,111,255,0.2) 0%, transparent 70%)', pointerEvents: 'none' }} />
+  <div style={{ position: 'absolute', bottom: -80, left: -60, width: 300, height: 300, borderRadius: '50%', background: 'radial-gradient(circle, rgba(27,79,216,0.15) 0%, transparent 70%)', pointerEvents: 'none' }} />
   <div className="container" style={{ position: 'relative', zIndex: 1 }}>
     <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '1.5rem' }}>
       <Link href="/" style={{ color: 'rgba(255,255,255,0.45)', fontSize: '0.85rem', textDecoration: 'none' }}>Home</Link>
@@ -71,7 +71,7 @@ export default function AboutPage() {
     </div>
     <div className="pill" style={{ marginBottom: '1.5rem' }}>🏢 About Open Lending</div>
     <h1 className="display" style={{ color: 'white', maxWidth: 680, marginBottom: '1.5rem' }}>
-      A lending partner built on<br /><span style={{ color: '#9B55E9' }}>trust and execution</span>
+      A lending partner built on<br /><span style={{ color: '#93B4FF' }}>trust and execution</span>
     </h1>
     <p style={{ color: 'rgba(255,255,255,0.7)', fontSize: '1.15rem', lineHeight: 1.75, maxWidth: 580, marginBottom: '2.5rem' }}>
       Open Lending was founded on a simple belief:

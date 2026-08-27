@@ -41,12 +41,12 @@ export default function ContactPage() {
     <>
       <Navbar />
 
-      {/* HERO */}
+{/* HERO */}
 <section style={{
-  background: 'linear-gradient(135deg, var(--navy) 0%, #1A0F2E 60%, #3D1F6B 100%)',
+  background: 'linear-gradient(135deg, var(--navy) 0%, #0D2347 60%, #1B3A6B 100%)',
   paddingTop: 'calc(72px + 4rem)', paddingBottom: '4rem', position: 'relative', overflow: 'hidden'
 }}>
-  <div style={{ position: 'absolute', top: -100, right: -100, width: 450, height: 450, borderRadius: '50%', background: 'radial-gradient(circle, rgba(155,85,233,0.2) 0%, transparent 70%)', pointerEvents: 'none' }} />
+  <div style={{ position: 'absolute', top: -100, right: -100, width: 450, height: 450, borderRadius: '50%', background: 'radial-gradient(circle, rgba(59,111,255,0.2) 0%, transparent 70%)', pointerEvents: 'none' }} />
   <div className="container" style={{ position: 'relative', zIndex: 1 }}>
     <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '1.5rem' }}>
       <Link href="/" style={{ color: 'rgba(255,255,255,0.45)', fontSize: '0.85rem', textDecoration: 'none' }}>Home</Link>

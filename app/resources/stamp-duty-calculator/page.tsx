@@ -158,7 +158,7 @@ export default function StampDutyCalculatorPage() {
             <ChevronRight size={14} color="rgba(255,255,255,0.3)" />
             <span style={{ color: '#93B4FF', fontSize: '0.85rem' }}>Stamp Duty Calculator</span>
           </div>
-          <div className="pill" style={{ marginBottom: '1.25rem' }}>🏷-Calculator</div>
+          <div className="pill" style={{ marginBottom: '1.25rem' }}>Calculator</div>
           <h1 className="heading-1" style={{ color: 'white', marginBottom: '0.75rem' }}>Stamp Duty Calculator</h1>
           <p style={{ color: 'rgba(255,255,255,0.65)', fontSize: '1.05rem', maxWidth: 480 }}>
             Calculate stamp duty for all Australian states and territories, including first home buyer concessions.

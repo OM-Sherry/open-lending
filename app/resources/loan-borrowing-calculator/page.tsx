@@ -172,7 +172,7 @@ export default function BorrowingCalculatorPage() {
               marginBottom: '1.25rem',
             }}
           >
-            💰 Calculator
+             Calculator
           </div>
 
           <h1

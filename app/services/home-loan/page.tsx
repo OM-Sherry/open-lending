@@ -47,7 +47,7 @@ export default function HomeLoanPage() {
             <ChevronRight size={14} color="rgba(255,255,255,0.3)" />
             <span style={{ color: '#93B4FF', fontSize: '0.85rem' }}>Home Loan</span>
           </div>
-          <div className="pill" style={{ marginBottom: '1.5rem' }}>🏠 Home Loan</div>
+          <div className="pill" style={{ marginBottom: '1.5rem' }}> Home Loan</div>
           <h1 className="display" style={{ color: 'white', maxWidth: 680, marginBottom: '1.5rem' }}>
             The right home loan,<br /><span style={{ color: '#93B4FF' }}>structured for you</span>
           </h1>

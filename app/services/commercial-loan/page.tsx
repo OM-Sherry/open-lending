@@ -50,7 +50,7 @@ export default function CommercialLoanPage() {
             <ChevronRight size={14} color="rgba(255,255,255,0.3)" />
             <span style={{ color: '#93B4FF', fontSize: '0.85rem' }}>Commercial Loan</span>
           </div>
-          <div className="pill" style={{ marginBottom: '1.5rem' }}>🏢 Commercial Loan</div>
+          <div className="pill" style={{ marginBottom: '1.5rem' }}> Commercial Loan</div>
           <h1 className="display" style={{ color: 'white', maxWidth: 700, marginBottom: '1.5rem' }}>
             Business lending that<br /><span style={{ color: '#93B4FF' }}>moves at your pace</span>
           </h1>
