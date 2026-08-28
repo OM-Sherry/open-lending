@@ -324,18 +324,27 @@ export default function SherryContactPage() {
             Scan the QR code to connect with me
           </p>
 
-          <img
-            src="/michael-wechat.png"
-            alt="Michael WeChat QR Code"
-            style={{
-              width: "210px",
-              maxWidth: "100%",
-              height: "auto",
-              borderRadius: "12px",
-              background: "white",
-              padding: "8px",
-            }}
-          />
+           <div
+             style={{
+             display: "flex",
+             justifyContent: "center",
+             width: "100%",
+             }}
+          >
+             <img
+               src="/michael-wechat.png"
+               alt="Michael WeChat QR Code"
+               style={{
+               width: "210px",
+               maxWidth: "100%",
+               height: "auto",
+               borderRadius: "12px",
+               background: "white",
+               padding: "8px",
+               display: "block",
+             }}
+            />
+          </div>
         </div>
 
         {/* Save Contact */}
