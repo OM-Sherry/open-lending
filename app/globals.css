@@ -738,8 +738,9 @@ nav {
     transform: none;
   }
 }
+
 /* Footer */
-footer { background: linear-gradient(135deg, #0D0D0D 0%, #1A0F2E 50%, #0D0D0D 100%); color: rgba(255,255,255,0.6); }
+footer { background: #0D0D0D; color: rgba(255,255,255,0.6); }
 .footer-brand { color:#ffffff; font-size: 1.2rem; font-weight: 700; margin-bottom: 0.75rem; }
 .footer-link { color: rgba(255,255,255,0.5); text-decoration: none; font-size: 0.9rem; display: block; margin-bottom: 0.5rem; transition: color 0.15s; }
 .footer-link:hover { color: var(--silver-light); }

@@ -228,7 +228,19 @@ export default function HomePage() {
         </div>  */}
       </div>
 
-      <div />
+      <div>
+  <img
+    src="images\about\people.jpg"
+    alt="Open Lending client family"
+    style={{
+      width: '100%',
+      height: 500,
+      objectFit: 'cover',
+      borderRadius: '63% 37% 54% 46% / 55% 48% 52% 45%',
+      display: 'block',
+    }}
+  />
+</div>
     </div>
   </div>
 </section>

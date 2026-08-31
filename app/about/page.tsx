@@ -7,12 +7,12 @@ export const metadata = { title: 'About Us - Open Lending', description:
   'Learn about Open Lending, our story, values, and the experienced team behind your lending journey.'}
 
 const values = [
-  { icon: '🎯', title: 'Client First', desc: 'Every recommendation we make is measured against one standard: is this genuinely the best outcome for the client?' },
-  { icon: '🔍', title: 'Transparency', desc: 'No hidden commissions, no preferred lender bias. We show our work and explain every recommendation clearly.' },
-  { icon: '⚡', title: 'Execution', desc: 'Advice without execution is just conversation. We follow through on every step from application to settlement.' },
-  { icon: '📚', title: 'Education', desc: 'We believe informed clients make better decisions. We take time to explain the why behind every strategy.' },
-  { icon: '🤝', title: 'Long-term Relationships', desc: 'The loan settles, but our relationship continues. We review your structure annually as life and rates change.' },
-  { icon: '🛡️', title: 'Accountability', desc: 'We set realistic expectations and own the outcome -good or bad. Our reputation depends on it.' },
+  { icon: '', title: 'Client First', desc: 'Every recommendation we make is measured against one standard: is this genuinely the best outcome for the client?' },
+  { icon: '', title: 'Transparency', desc: 'No hidden commissions, no preferred lender bias. We show our work and explain every recommendation clearly.' },
+  { icon: '', title: 'Execution', desc: 'Advice without execution is just conversation. We follow through on every step from application to settlement.' },
+  { icon: '', title: 'Education', desc: 'We believe informed clients make better decisions. We take time to explain the why behind every strategy.' },
+  { icon: '', title: 'Long-term Relationships', desc: 'The loan settles, but our relationship continues. We review your structure annually as life and rates change.' },
+  { icon: '', title: 'Accountability', desc: 'We set realistic expectations and own the outcome -good or bad. Our reputation depends on it.' },
 ]
 
 const team = [
@@ -69,7 +69,7 @@ export default function AboutPage() {
       <ChevronRight size={14} color="rgba(255,255,255,0.3)" />
       <span style={{ color: '#8F6BFF', fontSize: '0.85rem' }}>About Us</span>
     </div>
-    <div className="pill" style={{ marginBottom: '1.5rem' }}>🏢 About Open Lending</div>
+    <div className="pill" style={{ marginBottom: '1.5rem' }}> About Open Lending</div>
     <h1 className="display" style={{ color: 'white', maxWidth: 680, marginBottom: '1.5rem' }}>
       A lending partner built on<br /><span style={{ color: '#93B4FF' }}>trust and execution</span>
     </h1>
@@ -82,14 +82,14 @@ export default function AboutPage() {
     </div>
 
     {/* Stats */}
-    <div style={{ display: 'flex', gap: '3rem', marginTop: '4rem', flexWrap: 'wrap' }}>
+   {/* <div style={{ display: 'flex', gap: '3rem', marginTop: '4rem', flexWrap: 'wrap' }}>
       {[['10+', 'Years Experience'], ['$400M+', 'Funds Placed'], ['500+', 'Families Helped'], ['3', 'Office Locations']].map(([n, l]) => (
         <div key={l}>
           <div style={{ color: 'white', fontWeight: 800, fontSize: '1.75rem', letterSpacing: '-0.03em' }}>{n}</div>
           <div style={{ color: 'rgba(255,255,255,0.45)', fontSize: '0.8rem', marginTop: 2 }}>{l}</div>
         </div>
       ))}
-    </div>
+    </div> */}
   </div>
 </section>
 
@@ -128,7 +128,7 @@ export default function AboutPage() {
             {/* Image placeholder + quote */}
             <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
               <img
-                src="/images/about/team.png"
+                src="/images/about/team.jpg"
                 alt="Open Lending Office"
                 style={{
                   width: "100%",

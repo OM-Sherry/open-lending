@@ -32,7 +32,7 @@ export default function ContactPage() {
 
   const offices = [
     { city: 'Sydney', address: 'Level 12/87-89 Liverpool Street, Sydney NSW 2000', img: '/images/offices/sydney.webp' },
-    { city: 'Brisbane', address: 'Level 1/7 Clunies Ross Court, Eight Mile Plains QLD 4113', img: '/images/offices/brisbane.webp' },
+    { city: 'Brisbane', address: 'Level 1/7 Clunies Ross Court, Eight Mile Plains QLD 4113', img: '/images/offices/brisbane.jpg' },
     { city: 'Hobart', address: 'Level 1/22 Liverpool Street, Hobart TAS 7000', img: '/images/offices/hobart.jpg' }
   ]
 
@@ -53,7 +53,7 @@ export default function ContactPage() {
       <ChevronRight size={14} color="rgba(255,255,255,0.3)" />
       <span style={{ color: '#8F6BFF', fontSize: '0.85rem' }}>Contact Us</span>
     </div>
-    <div className="pill" style={{ marginBottom: '1.25rem' }}>📞 Get In Touch</div>
+    <div className="pill" style={{ marginBottom: '1.25rem' }}> Get In Touch</div>
     <h1 className="heading-1" style={{ color: 'white', marginBottom: '0.75rem' }}>Let's talk about your lending goals</h1>
     <p style={{ color: 'rgba(255,255,255,0.65)', fontSize: '1.05rem', maxWidth: 520, lineHeight: 1.75 }}>
       Book a free strategy call or send us a message. Our team typically responds within one business day.
