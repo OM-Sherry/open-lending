@@ -90,7 +90,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* TIMELINE */}
+      {/* TIMELINE 
       <section className="section" style={{ background: 'var(--gray)' }}>
         <div className="container">
           <div style={{ textAlign: 'center', marginBottom: '3.5rem' }}>
@@ -116,7 +116,7 @@ export default function AboutPage() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* VALUES */}
       <section className="section" style={{ background: 'var(--white)' }}>
