@@ -1,11 +1,15 @@
 'use client'
-import Link from 'next/link'
+
 import { useState, useMemo } from 'react'
+import { Link } from '@/i18n/navigation'
+import { useTranslations } from 'next-intl'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 import { ChevronRight, ArrowRight } from 'lucide-react'
 
 export default function RepaymentCalculatorPage() {
+  const t = useTranslations('repaymentCalcPage')
+
   const [loanAmount, setLoanAmount] = useState(500000)
   const [interestRate, setInterestRate] = useState(6.14)
   const [loanTerm, setLoanTerm] = useState(30)
@@ -41,6 +45,9 @@ export default function RepaymentCalculatorPage() {
   const interestPct = results.totalRepayment > 0 ? (results.totalInterest / results.totalRepayment) * 100 : 0
   const principalPct = 100 - interestPct
 
+  const otherCalcItems = t.raw('otherCalculators.items') as { title: string; desc: string }[]
+  const otherCalcHrefs = ['/resources/stamp-duty-calculator', '/resources/loan-borrowing-calculator']
+
   return (
     <>
       <Navbar />
@@ -50,14 +57,14 @@ export default function RepaymentCalculatorPage() {
         <div style={{ position: 'absolute', top: -100, right: -100, width: 400, height: 400, borderRadius: '50%', background: 'radial-gradient(circle, rgba(59,111,255,0.2) 0%, transparent 70%)', pointerEvents: 'none' }} />
         <div className="container" style={{ position: 'relative', zIndex: 1 }}>
           <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '1.5rem' }}>
-            <Link href="/" style={{ color: 'rgba(255,255,255,0.45)', fontSize: '0.85rem', textDecoration: 'none' }}>Home</Link>
+            <Link href="/" style={{ color: 'rgba(255,255,255,0.45)', fontSize: '0.85rem', textDecoration: 'none' }}>{t('breadcrumbHome')}</Link>
             <ChevronRight size={14} color="rgba(255,255,255,0.3)" />
-            <span style={{ color: '#93B4FF', fontSize: '0.85rem' }}>Repayment Calculator</span>
+            <span style={{ color: '#93B4FF', fontSize: '0.85rem' }}>{t('breadcrumbCurrent')}</span>
           </div>
-          <div className="pill" style={{ marginBottom: '1.25rem' }}> Calculator</div>
-          <h1 className="heading-1" style={{ color: 'white', marginBottom: '0.75rem' }}>Repayment Calculator</h1>
+          <div className="pill" style={{ marginBottom: '1.25rem' }}>{t('pill')}</div>
+          <h1 className="heading-1" style={{ color: 'white', marginBottom: '0.75rem' }}>{t('heroTitle')}</h1>
           <p style={{ color: 'rgba(255,255,255,0.65)', fontSize: '1.05rem', maxWidth: 480 }}>
-            Estimate your monthly, fortnightly, and weekly loan repayments instantly.
+            {t('heroSubtitle')}
           </p>
         </div>
       </section>
@@ -69,12 +76,12 @@ export default function RepaymentCalculatorPage() {
 
             {/* Inputs */}
             <div className="card" style={{ padding: '2.5rem' }}>
-              <h2 className="heading-3" style={{ color: 'var(--navy)', marginBottom: '2rem' }}>Loan Details</h2>
+              <h2 className="heading-3" style={{ color: 'var(--navy)', marginBottom: '2rem' }}>{t('loanDetails.heading')}</h2>
 
               {/* Loan Amount */}
               <div style={{ marginBottom: '2rem' }}>
                 <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '0.75rem' }}>
-                  <label style={{ fontWeight: 600, fontSize: '0.9rem', color: 'var(--navy)' }}>Loan Amount</label>
+                  <label style={{ fontWeight: 600, fontSize: '0.9rem', color: 'var(--navy)' }}>{t('loanDetails.loanAmountLabel')}</label>
                   <span style={{ fontWeight: 700, color: 'var(--blue)', fontSize: '1rem' }}>${fmt(loanAmount)}</span>
                 </div>
                 <input type="range" min={50000} max={3000000} step={10000} value={loanAmount}
@@ -88,7 +95,7 @@ export default function RepaymentCalculatorPage() {
               {/* Interest Rate */}
               <div style={{ marginBottom: '2rem' }}>
                 <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '0.75rem' }}>
-                  <label style={{ fontWeight: 600, fontSize: '0.9rem', color: 'var(--navy)' }}>Interest Rate</label>
+                  <label style={{ fontWeight: 600, fontSize: '0.9rem', color: 'var(--navy)' }}>{t('loanDetails.interestRateLabel')}</label>
                   <span style={{ fontWeight: 700, color: 'var(--blue)', fontSize: '1rem' }}>{interestRate.toFixed(2)}% p.a.</span>
                 </div>
                 <input type="range" min={1} max={15} step={0.05} value={interestRate}
@@ -102,8 +109,8 @@ export default function RepaymentCalculatorPage() {
               {/* Loan Term */}
               <div style={{ marginBottom: '2rem' }}>
                 <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '0.75rem' }}>
-                  <label style={{ fontWeight: 600, fontSize: '0.9rem', color: 'var(--navy)' }}>Loan Term</label>
-                  <span style={{ fontWeight: 700, color: 'var(--blue)', fontSize: '1rem' }}>{loanTerm} years</span>
+                  <label style={{ fontWeight: 600, fontSize: '0.9rem', color: 'var(--navy)' }}>{t('loanDetails.loanTermLabel')}</label>
+                  <span style={{ fontWeight: 700, color: 'var(--blue)', fontSize: '1rem' }}>{loanTerm} {t('loanDetails.yearsUnit')}</span>
                 </div>
                 <input type="range" min={1} max={30} step={1} value={loanTerm}
                   onChange={e => setLoanTerm(Number(e.target.value))}
@@ -115,18 +122,18 @@ export default function RepaymentCalculatorPage() {
 
               {/* Repayment Type */}
               <div>
-                <label style={{ fontWeight: 600, fontSize: '0.9rem', color: 'var(--navy)', display: 'block', marginBottom: '0.75rem' }}>Repayment Type</label>
+                <label style={{ fontWeight: 600, fontSize: '0.9rem', color: 'var(--navy)', display: 'block', marginBottom: '0.75rem' }}>{t('loanDetails.repaymentTypeLabel')}</label>
                 <div style={{ display: 'flex', gap: '0.75rem' }}>
-                  {(['principal', 'interest'] as const).map(t => (
-                    <button key={t} onClick={() => setRepaymentType(t)}
+                  {(['principal', 'interest'] as const).map(type => (
+                    <button key={type} onClick={() => setRepaymentType(type)}
                       style={{
                         flex: 1, padding: '0.75rem', borderRadius: '0.5rem', border: '2px solid',
-                        borderColor: repaymentType === t ? 'var(--blue)' : 'var(--border)',
-                        background: repaymentType === t ? 'var(--sky)' : 'white',
-                        color: repaymentType === t ? 'var(--blue)' : 'var(--muted)',
+                        borderColor: repaymentType === type ? 'var(--blue)' : 'var(--border)',
+                        background: repaymentType === type ? 'var(--sky)' : 'white',
+                        color: repaymentType === type ? 'var(--blue)' : 'var(--muted)',
                         fontWeight: 600, fontSize: '0.85rem', cursor: 'pointer'
                       }}>
-                      {t === 'principal' ? 'Principal & Interest' : 'Interest Only'}
+                      {type === 'principal' ? t('loanDetails.principalInterest') : t('loanDetails.interestOnly')}
                     </button>
                   ))}
                 </div>
@@ -137,16 +144,16 @@ export default function RepaymentCalculatorPage() {
             <div style={{ display: 'flex', flexDirection: 'column', gap: '1.25rem' }}>
               {/* Main result */}
               <div style={{ background: 'linear-gradient(135deg, var(--navy) 0%, #1B3A6B 100%)', borderRadius: '1rem', padding: '2.5rem', textAlign: 'center' }}>
-                <div style={{ color: 'rgba(255,255,255,0.55)', fontSize: '0.85rem', fontWeight: 600, letterSpacing: '0.08em', textTransform: 'uppercase', marginBottom: '0.5rem' }}>Monthly Repayment</div>
+                <div style={{ color: 'rgba(255,255,255,0.55)', fontSize: '0.85rem', fontWeight: 600, letterSpacing: '0.08em', textTransform: 'uppercase', marginBottom: '0.5rem' }}>{t('results.monthlyRepayment')}</div>
                 <div style={{ color: 'white', fontWeight: 800, fontSize: '3rem', letterSpacing: '-0.03em', lineHeight: 1 }}>${fmtDec(results.monthly)}</div>
-                <div style={{ color: 'rgba(255,255,255,0.45)', fontSize: '0.8rem', marginTop: '0.5rem' }}>per month</div>
+                <div style={{ color: 'rgba(255,255,255,0.45)', fontSize: '0.8rem', marginTop: '0.5rem' }}>{t('results.perMonth')}</div>
               </div>
 
               {/* Other frequencies */}
               <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem' }}>
                 {[
-                  { label: 'Fortnightly', val: results.fortnightly },
-                  { label: 'Weekly', val: results.weekly },
+                  { label: t('results.fortnightly'), val: results.fortnightly },
+                  { label: t('results.weekly'), val: results.weekly },
                 ].map(r => (
                   <div key={r.label} style={{ background: 'white', border: '1px solid var(--border)', borderRadius: '0.875rem', padding: '1.5rem', textAlign: 'center' }}>
                     <div style={{ color: 'var(--muted)', fontSize: '0.8rem', marginBottom: '0.4rem' }}>{r.label}</div>
@@ -157,11 +164,11 @@ export default function RepaymentCalculatorPage() {
 
               {/* Breakdown */}
               <div className="card" style={{ padding: '1.75rem' }}>
-                <h3 style={{ fontWeight: 700, color: 'var(--navy)', marginBottom: '1.25rem', fontSize: '0.95rem' }}>Loan Summary</h3>
+                <h3 style={{ fontWeight: 700, color: 'var(--navy)', marginBottom: '1.25rem', fontSize: '0.95rem' }}>{t('results.loanSummary')}</h3>
                 {[
-                  { label: 'Loan Amount', val: `$${fmt(loanAmount)}`, highlight: false },
-                  { label: 'Total Interest', val: `$${fmt(results.totalInterest)}`, highlight: false },
-                  { label: 'Total Repayment', val: `$${fmt(results.totalRepayment)}`, highlight: true },
+                  { label: t('results.loanAmount'), val: `$${fmt(loanAmount)}`, highlight: false },
+                  { label: t('results.totalInterest'), val: `$${fmt(results.totalInterest)}`, highlight: false },
+                  { label: t('results.totalRepayment'), val: `$${fmt(results.totalRepayment)}`, highlight: true },
                 ].map(r => (
                   <div key={r.label} style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '0.75rem 0', borderBottom: '1px solid var(--border)' }}>
                     <span style={{ fontSize: '0.9rem', color: 'var(--muted)' }}>{r.label}</span>
@@ -171,8 +178,8 @@ export default function RepaymentCalculatorPage() {
                 {/* Visual bar */}
                 <div style={{ marginTop: '1.25rem' }}>
                   <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: '0.75rem', color: 'var(--muted)', marginBottom: '0.5rem' }}>
-                    <span>Principal {principalPct.toFixed(0)}%</span>
-                    <span>Interest {interestPct.toFixed(0)}%</span>
+                    <span>{t('results.principal')} {principalPct.toFixed(0)}%</span>
+                    <span>{t('results.interest')} {interestPct.toFixed(0)}%</span>
                   </div>
                   <div style={{ height: 10, borderRadius: 99, background: 'var(--border)', overflow: 'hidden' }}>
                     <div style={{ height: '100%', width: `${principalPct}%`, background: 'linear-gradient(90deg, var(--blue) 0%, var(--blue-light) 100%)', borderRadius: 99 }} />
@@ -181,14 +188,14 @@ export default function RepaymentCalculatorPage() {
               </div>
 
               <Link href="/#contact" className="btn-primary" style={{ justifyContent: 'center' }}>
-                Speak to a Broker <ArrowRight size={16} />
+                {t('cta')} <ArrowRight size={16} />
               </Link>
             </div>
           </div>
 
           {/* Disclaimer */}
           <p style={{ fontSize: '0.75rem', color: 'var(--muted)', marginTop: '2rem', lineHeight: 1.6, maxWidth: 760 }}>
-            * This calculator provides estimates only and does not constitute financial advice. Results are based on the inputs provided and assume a constant interest rate. Actual repayments may vary. Please speak to one of our mortgage specialists for personalised advice.
+            {t('disclaimer')}
           </p>
         </div>
       </section>
@@ -196,16 +203,13 @@ export default function RepaymentCalculatorPage() {
       {/* OTHER CALCULATORS */}
       <section className="section-sm" style={{ background: 'var(--white)' }}>
         <div className="container">
-          <h3 className="heading-3" style={{ marginBottom: '1.5rem', color: 'var(--navy)' }}>Other Calculators</h3>
+          <h3 className="heading-3" style={{ marginBottom: '1.5rem', color: 'var(--navy)' }}>{t('otherCalculators.heading')}</h3>
           <div className="grid-2">
-            {[
-              { title: 'Stamp Duty Calculator', desc: 'Calculate stamp duty costs for your property purchase.', href: '/resources/stamp-duty-calculator' },
-              { title: 'Borrowing Power Calculator', desc: 'Find out how much you may be able to borrow.', href: '/resources/loan-borrowing-calculator' },
-            ].map(c => (
-              <Link key={c.title} href={c.href} className="card" style={{ textDecoration: 'none', display: 'block' }}>
+            {otherCalcItems.map((c, index) => (
+              <Link key={c.title} href={otherCalcHrefs[index]} className="card" style={{ textDecoration: 'none', display: 'block' }}>
                 <h4 style={{ fontWeight: 700, color: 'var(--navy)', marginBottom: '0.5rem' }}>{c.title}</h4>
                 <p className="body" style={{ fontSize: '0.9rem', marginBottom: '1rem' }}>{c.desc}</p>
-                <span style={{ color: 'var(--blue)', fontWeight: 600, fontSize: '0.875rem', display: 'flex', alignItems: 'center', gap: '0.4rem' }}>Open Calculator <ArrowRight size={14} /></span>
+                <span style={{ color: 'var(--blue)', fontWeight: 600, fontSize: '0.875rem', display: 'flex', alignItems: 'center', gap: '0.4rem' }}>{t('otherCalculators.openCalculator')} <ArrowRight size={14} /></span>
               </Link>
             ))}
           </div>
@@ -216,4 +220,3 @@ export default function RepaymentCalculatorPage() {
     </>
   )
 }
-

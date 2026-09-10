@@ -1,10 +1,13 @@
 'use client'
 
 import { useState } from 'react'
-import Link from 'next/link'
+import { Link } from '@/i18n/navigation'
 import { Menu, X } from 'lucide-react'
+import { useTranslations } from 'next-intl'
+import LanguageSwitcher from './LanguageSwitcher'
 
 export default function Navbar() {
+  const t = useTranslations('nav')
   const [menuOpen, setMenuOpen] = useState(false)
 
   const closeMenu = () => setMenuOpen(false)
@@ -33,27 +36,27 @@ export default function Navbar() {
           {/* Desktop navigation */}
           <div className="nav-links">
             <Link href="/" className="nav-link">
-              Home
+              {t('home')}
             </Link>
 
             <Link href="/#services" className="nav-link">
-              Services
+              {t('services')}
             </Link>
 
             <Link href="/process" className="nav-link">
-              Our Process
+              {t('process')}
             </Link>
 
             <Link href="/#resources" className="nav-link">
-              Resources
+              {t('resources')}
             </Link>
 
             <Link href="/about" className="nav-link">
-              About
+              {t('about')}
             </Link>
 
             <Link href="/contact" className="nav-link">
-              Contact
+              {t('contact')}
             </Link>
 
             <Link
@@ -64,8 +67,10 @@ export default function Navbar() {
                 fontSize: '0.875rem',
               }}
             >
-              Book a Call
+              {t('bookCall')}
             </Link>
+
+              <LanguageSwitcher />
           </div>
 
           {/* Mobile menu button */}
@@ -85,27 +90,27 @@ export default function Navbar() {
       {menuOpen && (
         <div className="mobile-menu">
           <Link href="/" onClick={closeMenu}>
-            Home
+            {t('home')}
           </Link>
 
           <Link href="/#services" onClick={closeMenu}>
-            Services
+            {t('services')}
           </Link>
 
           <Link href="/process" onClick={closeMenu}>
-            Our Process
+            {t('process')}
           </Link>
 
           <Link href="/#resources" onClick={closeMenu}>
-            Resources
+            {t('resources')}
           </Link>
 
           <Link href="/about" onClick={closeMenu}>
-            About
+            {t('about')}
           </Link>
 
           <Link href="/contact" onClick={closeMenu}>
-            Contact
+            {t('contact')}
           </Link>
 
           <Link
@@ -113,8 +118,10 @@ export default function Navbar() {
             className="btn-primary mobile-book-button"
             onClick={closeMenu}
           >
-            Book a Call
+            {t('bookCall')}
           </Link>
+
+          <LanguageSwitcher />
         </div>
       )}
     </>

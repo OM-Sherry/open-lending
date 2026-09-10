@@ -1,0 +1,734 @@
+{
+  "nav": {
+    "home": "Home",
+    "services": "Services",
+    "process": "Our Process",
+    "resources": "Resources",
+    "about": "About",
+    "contact": "Contact",
+    "bookCall": "Book a Call"
+  },
+  "footer": {
+    "brand": "Open Lending",
+    "tagline": "Your trusted partner for lending solutions in Sydney, Brisbane, and Hobart.",
+    "servicesHeading": "Services",
+    "resourcesHeading": "Resources",
+    "moreHeading": "More",
+    "ourProcess": "Our Process",
+    "homeLoan": "Home Loan",
+    "carLoan": "Car Loan",
+    "commercialLoan": "Commercial Loan",
+    "repaymentCalc": "Repayment Calculator",
+    "stampDutyCalc": "Stamp Duty Calculator",
+    "borrowingCalc": "Borrowing Calculator",
+    "aboutUs": "About Us",
+    "contactUs": "Contact Us",
+    "faq": "FAQ",
+    "copyright": "© 2026 Open Lending. All rights reserved.",
+    "creditLicence": "Credit Representative · Australian Credit Licence"
+  },
+
+   "home": {
+    "hero": {
+      "eyebrow": "OPEN LENDING",
+      "titleLine1": "Opening More",
+      "titleHighlight": "Possibilities",
+      "subtitle": "Structured lending advice, lender matching, and end-to-end support from assessment to settlement.",
+      "ctaPrimary": "Free Consultation",
+      "ctaSecondary": "See Our Process"
+    },
+    "welcome": {
+      "label": "About Us",
+      "heading": "Welcome to Open Lending",
+      "p1": "At Open Lending, we are committed to providing exceptional financial solutions tailored to your unique needs.",
+      "p2": "With years of experience in the mortgage industry, our team of experts is dedicated to helping you achieve your property and financial goals.",
+      "cta": "Talk to an Expert",
+      "features": [
+        { "title": "End-to-end Advisory", "desc": "Full coverage from discovery to settlement" },
+        { "title": "Multi-lender Panel", "desc": "Compare across 50+ lenders" },
+        { "title": "Credit-aware", "desc": "Optimised submission quality" },
+        { "title": "Post-settlement", "desc": "Ongoing loan review support" }
+      ]
+    },
+    "advisory": {
+      "label": "Our Approach",
+      "heading": "A more rigorous lending advisory experience",
+      "subtitle": "We combine structured planning, lender policy insight, and disciplined execution.",
+      "items": [
+        { "title": "Borrowing Strategy", "desc": "We map your target, timeline, and cash-flow position into a practical borrowing structure before paperwork begins." },
+        { "title": "Credit Positioning", "desc": "We assess serviceability, liabilities, and lender policy fit to reduce avoidable credit friction in assessment." },
+        { "title": "Execution Discipline", "desc": "From document collection to lender follow-up, we manage milestones and keep every stakeholder aligned through to settlement." }
+      ]
+    },
+    "process": {
+      "label": "How it Works",
+      "heading": "A transparent client journey",
+      "subtitle": "Six structured steps designed to remove uncertainty and keep you informed at every stage.",
+      "steps": [
+        { "n": "01", "title": "Search & Shortlist", "desc": "We filter and shortlist suitable loan options based on your deposit, repayment preferences, and risk profile." },
+        { "n": "02", "title": "Expert Consultation", "desc": "One-on-one session to review your income, goals, and borrowing capacity with a clear strategy outcome." },
+        { "n": "03", "title": "Application", "desc": "We prepare and submit a structured, credit-ready package to give your application the best chance of approval." },
+        { "n": "04", "title": "Tracking & Updating", "desc": "We actively monitor progress and manage lender communication so you always know where things stand." },
+        { "n": "05", "title": "Closing", "desc": "We coordinate settlement and walk you through loan terms, repayment setup, and signing requirements." },
+        { "n": "06", "title": "Post-Closing", "desc": "Ongoing loan health checks, refinancing reviews, and trusted partner referrals after settlement." }
+      ],
+      "cta": "View Full Process"
+    },
+    "why": {
+      "label": "Why Open Lending",
+      "heading": "Why Choose Open Lending",
+      "items": [
+        { "title": "Free Property Valuation", "cta": "Apply Now" },
+        { "title": "Tailored Loan Solution", "cta": "Check Our Process" },
+        { "title": "Professional Team", "cta": "Contact Us" },
+        { "title": "Competitive Rates", "cta": "View Loan Products" }
+      ]
+    },
+    "services": {
+      "label": "What We Offer",
+      "heading": "Our Services",
+      "learnMore": "Learn More",
+      "items": [
+        { "title": "Home Loan", "desc": "Whether you are buying your first home, upgrading, or refinancing — we find the right loan structure for your situation." },
+        { "title": "Car Loan", "desc": "Competitive car finance solutions with fast approvals and flexible repayment terms tailored to your budget." },
+        { "title": "Commercial Loan", "desc": "Business lending solutions for property acquisition, equipment, and working capital — structured for your growth." }
+      ]
+    },
+    "resources": {
+      "label": "Tools & Calculators",
+      "heading": "Resources",
+      "openCalculator": "Open Calculator",
+      "items": [
+        { "title": "Repayment Calculator", "desc": "Estimate your monthly repayments based on loan amount, interest rate, and term." },
+        { "title": "Stamp Duty Calculator", "desc": "Calculate stamp duty costs for your property purchase across all Australian states." },
+        { "title": "Loan Borrowing Calculator", "desc": "Find out how much you may be able to borrow based on your income and expenses." }
+      ]
+    },
+    "lenders": {
+      "label": "Our Panel",
+      "heading": "Our Lenders",
+      "subtitle": "We partner with leading financial institutions to provide you with the best loan options."
+    },
+    "contact": {
+      "getInTouch": "Get In Touch",
+      "heading": "Let's talk about your lending goals",
+      "subtitle": "Ready to take the next step? Our experienced lending specialists are here to guide you through every stage of your finance journey with confidence.",
+      "info": [
+        { "label": "Sydney", "val": "Level 12 /87-89 Liverpool Street, Sydney NSW 2000" },
+        { "label": "Brisbane", "val": "Level 1/7 Clunies Ross Court, Eight Mile Plains QLD 4113" },
+        { "label": "Hobart", "val": "Level 1/22 Liverpool Street, Hobart TAS 7000" },
+        { "label": "Email", "val": "info@openlendinggroup.com.au" },
+        { "label": "Hours", "val": "Mon–Fri 10:00 am – 06:00 pm · Sat/Sun Closed" }
+      ],
+      "form": {
+        "heading": "Book a Strategy Call",
+        "nameLabel": "Full Name",
+        "emailLabel": "Email Address", 
+        "phoneLabel": "Phone Number",
+        "loanTypeLabel": "Loan Type",
+        "loanTypeOptions": ["Home Loan", "Car Loan", "Commercial Loan", "Refinance"],
+        "messageLabel": "Message",
+        "messagePlaceholder": "Tell us about your situation...",
+        "sending": "Sending...",
+        "send": "Send Message",
+        "success": "Message sent successfully! We will contact you soon."
+      }
+    }
+  },
+
+  "about": {
+  "breadcrumbHome": "Home",
+  "breadcrumbCurrent": "About Us",
+  "pill": "About Open Lending",
+  "heroTitle1": "A lending partner built on",
+  "heroTitleHighlight": "trust and execution",
+  "heroSubtitle": "Open Lending was founded on a simple belief: Australians deserve lending advice that is honest, strategic, and delivered with integrity from start to finish.",
+  "heroCta": "Work With Us",
+  "story": {
+    "label": "Our Story",
+    "heading": "Why we started Open Lending",
+    "p1": "Open Lending was founded in 2015 after our founding team saw too many clients receive generic loan recommendations that suited the broker's panel - not the client's situation.",
+    "p2": "We set out to build something different: a firm where every recommendation starts with a deep understanding of the client's goals, financial position, and timeline - and ends with a loan that actually fits.",
+    "p3": "Today, we operate from three offices across Sydney, Brisbane, and Hobart, with a team of specialists covering residential, commercial, and investment lending. Our panel spans 50+ lenders, from major banks to specialist non-bank lenders.",
+    "bullets": [
+      "Independently owned no bank ownership or preferred lender bias",
+      "Fee structure disclosed upfront on every engagement",
+      "Access to lenders not available through bank branches",
+      "Ongoing review at no additional cost after settlement"
+    ],
+    "quote": "We measure success not by how many loans we write, but by how many clients genuinely feel they made the right decision - five years later."
+  },
+  "timeline": {
+    "label": "Our Journey",
+    "heading": "A decade of growth", 
+    "milestones": [
+      { "year": "2015", "title": "Founded in Sydney", "desc": "Open Lending was established with a focus on structured lending advice for residential clients." },
+      { "year": "2017", "title": "Brisbane Office Opens", "desc": "Expanded into Queensland to serve the growing Southeast Queensland property market." },
+      { "year": "2019", "title": "Commercial Division", "desc": "Launched a dedicated commercial lending team to serve business clients and investors." },
+      { "year": "2021", "title": "$100M Milestone", "desc": "Surpassed $100 million in total loans settled for Australian families and businesses." },
+      { "year": "2023", "title": "Hobart Office Opens", "desc": "Expanded into Tasmania to support the growing Hobart property market." },
+      { "year": "2025", "title": "$400M+ Placed", "desc": "Over $200 million in funds placed across residential, commercial, and investment loans." }
+    ]
+  },
+  "values": {
+    "label": "What We Stand For",
+    "heading": "Our Values",
+    "subtitle": "These are not slogans on a wall. They are the standards we hold ourselves to on every client engagement.",
+    "items": [
+      { "title": "Client First", "desc": "Every recommendation we make is measured against one standard: is this genuinely the best outcome for the client?" },
+      { "title": "Transparency", "desc": "No hidden commissions, no preferred lender bias. We show our work and explain every recommendation clearly." },
+      { "title": "Execution", "desc": "Advice without execution is just conversation. We follow through on every step from application to settlement." },
+      { "title": "Education", "desc": "We believe informed clients make better decisions. We take time to explain the why behind every strategy." },
+      { "title": "Long-term Relationships", "desc": "The loan settles, but our relationship continues. We review your structure annually as life and rates change." },
+      { "title": "Accountability", "desc": "We set realistic expectations and own the outcome -good or bad. Our reputation depends on it." }
+    ]
+  },
+  "offices": {
+    "label": "Where We Are",
+    "heading": "Our Offices",
+    "items": [
+      { "city": "Sydney", "address": "Level 12/87-89 Liverpool Street, Sydney NSW 2000" },
+      { "city": "Brisbane", "address": "Level 1/7 Clunies Ross Court, Eight Mile Plains QLD 4113" },
+      { "city": "Hobart", "address": "Level 1/22 Liverpool Street, Hobart TAS 7000" }
+    ],
+    "email": "info@openlendinggroup.com.au",
+    "hours": "Mon–Fri 10:00 am -6:00 pm"
+  },
+  "accreditations": {
+    "label": "Accreditations & Memberships",
+    "items": ["MFAA Member", "FBAA Member", "Australian Credit Licence", "Credit Representative", "AFCA Member"]
+  },
+  "cta": {
+    "heading": "Ready to work with us?",
+    "subtitle": "Book a free strategy call with one of our specialists and get a clear lending strategy tailored to your goals.",
+    "primaryCta": "Book a Free Call",
+    "secondaryCta": "View Our Services"
+  }
+},
+
+"contactPage": {
+  "breadcrumbHome": "Home",
+  "breadcrumbCurrent": "Contact Us",
+  "pill": "Get In Touch",
+  "heroTitle": "Let's talk about your lending goals",
+  "heroSubtitle": "Book a free strategy call or send us a message. Our team typically responds within one business day.",
+  "form": {
+    "successTitle": "Message Sent!",
+    "successBody": "Thank you for reaching out. One of our specialists will be in touch within one business day.",
+    "sendAnother": "Send Another Message",
+    "heading": "Book a Strategy Call",
+    "subtitle": "Fill in your details and we will be in touch to schedule a time that suits you.",
+    "nameLabel": "Full Name *",
+    "phoneLabel": "Phone Number",
+    "emailLabel": "Email Address *",
+    "loanTypeLabel": "Loan Type",
+    "loanTypeOptions": ["Home Loan", "Car Loan", "Commercial Loan", "Refinance", "Investment Loan", "SMSF Loan", "Other"],
+    "messageLabel": "How can we help? *",
+    "messagePlaceholder": "Tell us about your situation -property type, loan amount, timeline, or any questions you have...",
+    "sending": "Sending...",
+    "send": "Send Message",
+    "privacy": "We respect your privacy. Your information will never be shared with third parties."
+  },
+  "info": {
+    "heading": "Contact Information",
+    "items": [
+      { "label": "Email", "val": "info@openlendinggroup.com.au" },
+      { "label": "Business Hours", "val": "Mon–Fri 10:00 am -6:00 pm" },
+      { "label": "Response Time", "val": "Within 1 business day" }
+    ]
+  },
+  "whatsNext": {
+    "heading": "What happens next?",
+    "steps": [
+      "We review your enquiry and match you with the right specialist",
+      "A specialist calls to understand your situation in detail (30 min)",
+      "We prepare a written strategy with lender options and next steps",
+      "You decide if you want to proceed -no obligation"
+    ]
+  },
+  "promise": {
+    "label": "Our Promise",
+    "text": "The initial strategy call is completely free. No sales pressure, no obligation. We give you honest advice whether or not you choose to work with us."
+  },
+  "offices": {
+    "label": "Our Locations",
+    "heading": "Visit Us",
+    "subtitle": "Three offices across Australia to serve you in person.",
+    "items": [
+      { "city": "Sydney", "address": "Level 12/87-89 Liverpool Street, Sydney NSW 2000" },
+      { "city": "Brisbane", "address": "Level 1/7 Clunies Ross Court, Eight Mile Plains QLD 4113" },
+      { "city": "Hobart", "address": "Level 1/22 Liverpool Street, Hobart TAS 7000" }
+    ]
+  },
+  "faq": {
+    "label": "FAQ",
+    "heading": "Common questions",
+    "items": [
+      { "q": "Is the initial consultation free?", "a": "Yes, completely free. The strategy call has no cost and no obligation. We give you honest advice regardless of whether you choose to proceed with us." },
+      { "q": "How quickly will you respond?", "a": "We aim to respond to all enquiries within one business day. For urgent matters, please call us directly at your nearest office." },
+      { "q": "Do I need to visit an office?", "a": "No. We work with clients Australia-wide via phone and video call. In-person meetings are available at our Sydney, Brisbane, and Hobart offices if preferred." },
+      { "q": "What should I prepare before calling?", "a": "Nothing formal -just a rough idea of your goal (buying, refinancing, investing) and your current situation. We will guide you through what we need from there." }
+    ]
+  }
+},
+
+"faqPage": {
+  "breadcrumbHome": "Home",
+  "breadcrumbCurrent": "FAQ",
+  "pill": "FAQ",
+  "heroTitle": "Frequently Asked Questions",
+  "heroSubtitle": "Answers to the most common questions about home loans, refinancing, car loans, and commercial lending.",
+  "categoriesLabel": "Categories",
+  "stillHaveQuestions": "Still have questions?",
+  "stillHaveQuestionsBody": "Book a free call and we will answer your specific questions.",
+  "talkToSpecialist": "Talk to a Specialist",
+  "categories": [
+    {
+      "label": "Home Loans",
+      "faqs": [
+        { "q": "How much deposit do I need to buy a home?", "a": "Most lenders require a minimum 5-20% deposit. With less than 20%, you will typically need to pay Lenders Mortgage Insurance (LMI). A guarantor arrangement can sometimes help you purchase with a smaller deposit while avoiding LMI." },
+        { "q": "What is the difference between fixed and variable rates?", "a": "A fixed rate locks in your interest rate for a set period (usually 1-5 years), giving you repayment certainty. A variable rate moves with the market, offering more flexibility (like offset accounts and extra repayments) but less predictability. Many clients choose a split loan to balance both." },
+        { "q": "What is an offset account?", "a": "An offset account is a transaction account linked to your home loan. The balance in the offset reduces the loan balance on which interest is calculated. For example, a $500,000 loan with $50,000 in offset means you only pay interest on $450,000." },
+        { "q": "How long does home loan approval take?", "a": "Conditional approval can come within 24-48 hours for straightforward applications. Full approval typically takes 3-5 business days once all documents are submitted. Complex situations or tight timelines -always let us know upfront so we can manage the process accordingly." },
+        { "q": "Can I get a home loan if I am self-employed?", "a": "Yes. Self-employed borrowers typically need 2 years of tax returns and financial statements. Some lenders offer low-doc loans requiring less documentation, though these usually come with slightly higher rates. We work with lenders experienced in self-employed applications." },
+        { "q": "What is LMI and can I avoid it?", "a": "Lenders Mortgage Insurance protects the lender (not you) if you default on a loan with less than 20% deposit. You can avoid it by saving a 20% deposit, using a guarantor, or qualifying for a first home buyer LMI waiver scheme." }
+      ]
+    },
+    {
+      "label": "Refinancing",
+      "faqs": [
+        { "q": "When should I consider refinancing?", "a": "Good triggers to review your loan include: your fixed rate period ending, rates moving significantly, your property value increasing (improving your LVR), or a change in your financial situation. We recommend a loan review every 2-3 years as a baseline." },
+        { "q": "How much can I save by refinancing?", "a": "Savings depend on your current rate, loan balance, and what you can access. Even a 0.5% rate reduction on a $500,000 loan saves around $2,500 per year. We run a full comparison including exit fees and new loan costs before recommending a switch." },
+        { "q": "Are there costs involved in refinancing?", "a": "Potentially yes -discharge fees from your existing lender, government fees, and new lender application fees. We calculate the break-even point so you can see how long it takes for savings to outweigh costs. In many cases, lenders offer cashback offers that offset these costs." },
+        { "q": "Can I access equity when I refinance?", "a": "Yes. If your property has increased in value, refinancing can let you access that equity for renovations, investment, or other purposes, subject to serviceability and LVR limits." }
+      ]
+    },
+    {
+      "label": "Car Loans",
+      "faqs": [
+        { "q": "Can I get pre-approved before visiting a dealership?", "a": "Yes, and we strongly recommend it. Pre-approval lets you know your budget and gives you negotiating power at the dealership. We can have a pre-approval letter ready within hours for most applicants." },
+        { "q": "What is the difference between a chattel mortgage and a car lease?", "a": "A chattel mortgage means you own the vehicle from day one and use it as security for the loan -popular for business use. A lease means the lender owns the vehicle and you make fixed payments, with an option to purchase at the end. Each has different tax implications." },
+        { "q": "Can I finance a private sale vehicle?", "a": "Yes, many lenders finance private sale purchases, subject to the vehicle's age and condition. There are usually restrictions on vehicles over 10 years old. We will clarify applicable lender policies for your specific vehicle." }
+      ]
+    },
+    {
+      "label": "Commercial Lending",
+      "faqs": [
+        { "q": "What LVR can I borrow to for commercial property?", "a": "Most lenders will lend up to 65-70% LVR for commercial property. Some specialist lenders may go higher with additional security, a strong borrower profile, or in certain property types. Residential security can sometimes supplement commercial deals." },
+        { "q": "Do I need two years of financial statements?", "a": "Generally yes for standard commercial loans. However, there are low-doc and alt-doc options for established businesses with demonstrable cash flow. We assess the full picture to find the right fit." },
+        { "q": "How long does commercial loan approval take?", "a": "Commercial deals typically take 2-4 weeks from full submission to approval. Complex structures, development finance, or specialist lender deals may take longer. We set realistic timelines upfront and manage the process throughout." }
+      ]
+    },
+    {
+      "label": "The Process",
+      "faqs": [
+        { "q": "What documents do I need to apply?", "a": "Typically: last 2 payslips (or 2 years tax returns if self-employed), last 3 months bank statements, photo ID, and a signed contract of sale or property address. We give you a tailored document checklist once we understand your situation." },
+        { "q": "Do you charge a fee for your service?", "a": "Our service is free for most residential clients. We are paid a commission by the lender when your loan settles. We disclose all commissions transparently. For some complex commercial or specialist situations, a broker fee may apply -this is always agreed upfront." },
+        { "q": "Can you help if I have bad credit?", "a": "Yes. We work with specialist lenders who assess applications beyond just credit scores. Depending on your situation -defaults, bankruptcy, or missed payments -there may be suitable options available. We assess honestly and will tell you if the timing is not right." },
+        { "q": "Do I need to visit an office?", "a": "No. We work with clients Australia-wide via phone and video. In-person meetings are available at our Sydney, Brisbane, and Hobart offices if you prefer." }
+      ]
+    }
+  ]
+},
+
+
+"processPage": {
+  "breadcrumbHome": "Home",
+  "breadcrumbCurrent": "Our Process",
+  "heroTitle1": "A clear path from",
+  "heroTitleHighlight": "search to settlement",
+  "heroSubtitle": "Six structured steps designed to remove uncertainty, reduce delays, and keep you informed at every stage of the lending journey.",
+  "ctaPrimary": "Book a Consultation",
+  "ctaSecondary": "Talk to a Broker",
+  "stats": [
+    { "n": "6", "l": "Clear Steps" },
+    { "n": "500+", "l": "Loans Settled" },
+    { "n": "1 Day", "l": "Avg. Response Time" }
+  ],
+  "stepByStep": {
+    "label": "Step by Step",
+    "heading": "Our Six-Step Process",
+    "subtitle": "Every step has a clear purpose, defined deliverable, and practical outcome for you."
+  },
+  "stepLabel": "Step",
+  "steps": [
+    { "number": "01", "title": "Search & Shortlist", "content": "At this stage, our team reviews blog posts, market updates, and resource content to track lending trends, rate movements, and product changes. We then filter and shortlist suitable loan directions based on your deposit position, repayment preferences, and risk profile. You receive a clear, curated set of options rather than having to compare everything yourself." },
+    { "number": "02", "title": "Expert Consultation", "content": "Book a one-on-one session with an experienced broker to review your income, liabilities, savings, and long-term goals in detail. We clarify borrowing capacity, likely approval conditions, and lender policy fit based on your scenario. You will leave this consultation with a clear strategy, required document checklist, and next-step timeline." },
+    { "number": "03", "title": "Application", "content": "Once you are ready, we help you complete and submit the application with a structured, credit-ready package. Our team reviews supporting documents for consistency, addresses potential assessment questions early, and prepares a strong submission narrative. This reduces back-and-forth and helps lenders assess your file more efficiently." },
+    { "number": "04", "title": "Tracking & Updating", "content": "After submission, we actively monitor progress and manage communication with the lender, credit assessor, and any third parties involved. You receive regular status updates, clear explanations of outstanding requirements, and guidance on any additional documents. Our focus is to keep the process moving while minimizing uncertainty and delays." },
+    { "number": "05", "title": "Closing", "content": "When formal approval is issued, we coordinate the closing stage and walk you through key loan terms, repayment setup, and settlement requirements. We assist with document review and signing to ensure accuracy before funds are released. The goal is a smooth settlement experience with full clarity on your obligations from day one." },
+    { "number": "06", "title": "Post-Closing", "content": "Our support continues after settlement through regular loan health checks and strategic reviews as your circumstances change. We help you assess refinancing opportunities, equity release options, and structure adjustments when rates or goals shift. Where relevant, we also connect you with trusted partners for tax, accounting, and insurance coordination." }
+  ],
+  "cta": {
+    "heading": "Ready to start the process?",
+    "subtitle": "Book a free consultation and we will walk you through the first step together.",
+    "primaryCta": "Book Free Consultation",
+    "secondaryCta": "View Our Services"
+  }
+},
+
+
+"homeLoanPage": {
+  "breadcrumbHome": "Home",
+  "breadcrumbServices": "Services",
+  "breadcrumbCurrent": "Home Loan",
+  "pill": "Home Loan",
+  "heroTitle1": "The right home loan,",
+  "heroTitleHighlight": "structured for you",
+  "heroSubtitle": "Whether you are buying your first home, upgrading, investing, or refinancing -we find the right loan structure and lender for your exact situation.",
+  "ctaPrimary": "Get Started",
+  "ctaSecondary": "How It Works",
+  "quickStats": [
+    { "n": "From 5%", "l": "Min. Deposit" },
+    { "n": "24-48hr", "l": "Conditional Approval" },
+    { "n": "50+", "l": "Lenders Compared" }
+  ],
+  "features": {
+    "label": "What We Cover",
+    "heading": "Home loan solutions for every situation",
+    "subtitle": "From first home buyers to seasoned investors, we have a solution that fits.",
+    "items": [
+      { "title": "First Home Buyer", "desc": "Navigate grants, LMI waivers, and stamp duty concessions with expert guidance tailored to first-time buyers." },
+      { "title": "Refinancing", "desc": "Lower your rate, access equity, or consolidate debt. We compare your current loan against 50+ lenders to find savings." },
+      { "title": "Investment Property", "desc": "Structure your investment loan to maximise tax efficiency and cash flow -interest-only, offset, or split options." },
+      { "title": "Construction Loans", "desc": "Progressive drawdown loans that match your build schedule, keeping interest costs low during construction." },
+      { "title": "Upgraders", "desc": "Selling and buying simultaneously? We coordinate bridging finance so you don't miss your next home." },
+      { "title": "Guarantor Loans", "desc": "Help from family can unlock a faster path to ownership. We structure guarantor arrangements safely for all parties." }
+    ]
+  },
+  "howItWorks": {
+    "label": "The Process",
+    "heading": "How we get your home loan approved",
+    "steps": [
+      { "title": "Assess Your Position", "desc": "We review income, expenses, credit history, and deposit to map your true borrowing power." },
+      { "title": "Select the Right Lender", "desc": "We shortlist lenders whose policy, pricing, and product actually fit your scenario -not just the lowest rate." },
+      { "title": "Prepare Your Application", "desc": "Complete document package, pre-empting every question a credit assessor is likely to ask." },
+      { "title": "Approval & Settlement", "desc": "We manage the lender, conveyancer, and real estate agent to keep your settlement on track." }
+    ]
+  },
+  "rates": {
+    "label": "Indicative Rates",
+    "heading": "Competitive rates across our lender panel",
+    "subtitle": "We do not lock you into one lender. We compare rates and policy across our full panel to find the best fit -not just the lowest headline rate.",
+    "bullets": [
+      "Access to major banks, non-banks, and specialist lenders",
+      "Variable, fixed, and split loan options",
+      "Offset accounts and redraw facilities",
+      "Interest-only periods for investors",
+      "Cashback offers and fee waivers where available"
+    ],
+    "cta": "Get a Rate Comparison",
+    "items": [
+      { "type": "Variable Rate", "from": "From 6.14% p.a.", "note": "Comparison rate 6.18% p.a." },
+      { "type": "Fixed Rate (2yr)", "from": "From 5.89% p.a.", "note": "Comparison rate 6.22% p.a." },
+      { "type": "Fixed Rate (3yr)", "from": "From 5.99% p.a.", "note": "Comparison rate 6.28% p.a." },
+      { "type": "Interest Only", "from": "From 6.49% p.a.", "note": "Comparison rate 6.53% p.a." }
+    ],
+    "disclaimer": "* Rates are indicative only and subject to change. Comparison rates based on a $150,000 loan over 25 years. Your actual rate will depend on your individual circumstances."
+  },
+  "faq": {
+    "label": "FAQ",
+    "heading": "Common questions about home loans",
+    "items": [
+      { "q": "How much deposit do I need?", "a": "Most lenders require at least 5-20% of the purchase price. A 20% deposit avoids Lenders Mortgage Insurance (LMI), but we can help you purchase with less using LMI or a guarantor." },
+      { "q": "How long does approval take?", "a": "Conditional approval can come within 24-48 hours for straightforward applications. Full approval typically takes 3-5 business days once all documents are submitted." },
+      { "q": "What documents will I need?", "a": "Generally: last 2 payslips, last 2 years tax returns (self-employed), 3 months bank statements, ID, and a signed contract of sale. We guide you through exactly what is needed for your situation." },
+      { "q": "Fixed or variable rate?", "a": "Depends on your risk appetite and plans. Fixed gives certainty; variable offers flexibility and often features like offset accounts. Many clients choose a split loan to balance both." }
+    ]
+  },
+  "cta": {
+    "heading": "Ready to find your home loan?",
+    "subtitle": "Book a free strategy call and we will map out a clear path to your approval.",
+    "primaryCta": "Book a Free Call",
+    "secondaryCta": "Explore Car Loans"
+  }
+},
+
+"carLoanPage": {
+  "breadcrumbHome": "Home",
+  "breadcrumbServices": "Services",
+  "breadcrumbCurrent": "Car Loan",
+  "pill": "Car Loan",
+  "heroTitle1": "Drive away sooner with",
+  "heroTitleHighlight": "smarter car finance",
+  "heroSubtitle": "Fast pre-approvals, competitive rates, and flexible terms for new and used vehicles -personal or business use.",
+  "ctaPrimary": "Get Pre-Approved",
+  "ctaSecondary": "See Loan Types",
+  "quickStats": [
+    { "n": "2hr", "l": "Pre-approval" },
+    { "n": "7 yrs", "l": "Max Term" },
+    { "n": "$150K", "l": "Max Loan" }
+  ],
+  "loanTypes": {
+    "label": "Finance Options",
+    "heading": "Car finance for every situation",
+    "subtitle": "Personal, business, new, or used -we have a product that fits.",
+    "items": [
+      { "title": "New Car Finance", "desc": "Finance a brand-new vehicle from a dealership with competitive rates and same-day pre-approval so you negotiate with confidence." },
+      { "title": "Used Car Finance", "desc": "Quality used vehicles up to 10 years old. We find lenders with flexible policies for private sales and dealer purchases alike." },
+      { "title": "Chattel Mortgage", "desc": "For business use vehicles -own the car from day one while enjoying GST and depreciation benefits. Ideal for ABN holders." },
+      { "title": "Car Lease", "desc": "Fixed monthly payments with an option to purchase at the end of the term. Great for managing cash flow." },
+      { "title": "Novated Lease", "desc": "Salary-packaging your car through your employer to save on GST and reduce taxable income." },
+      { "title": "Refinance", "desc": "Already have a car loan? We compare your current rate against the market -many clients save hundreds each year." }
+    ]
+  },
+  "benefits": {
+    "label": "Why Us",
+    "heading": "Car finance done differently",
+    "subtitle": "We work for you, not the dealership. Our job is to find the most competitive finance available, with terms that actually work for your budget.",
+    "items": [
+      "Pre-approval in as little as 2 hours",
+      "Loans from $5,000 to $150,000",
+      "Terms from 1 to 7 years",
+      "New, used, and commercial vehicles",
+      "No early repayment penalties on select products",
+      "Balloon payment options to reduce monthly repayments"
+    ],
+    "cta": "Apply Now",
+    "timeline": [
+      { "label": "Application", "time": "10 mins" },
+      { "label": "Pre-approval", "time": "2 hrs" },
+      { "label": "Full Approval", "time": "24 hrs" },
+      { "label": "Settlement", "time": "1-3 days" }
+    ]
+  },
+  "faq": {
+    "label": "FAQ",
+    "heading": "Common car loan questions",
+    "items": [
+      { "q": "Can I get pre-approved before visiting a dealership?", "a": "Yes. Pre-approval lets you know exactly what you can spend before you walk in, giving you stronger negotiating power. We can have a pre-approval letter ready within hours for most applicants." },
+      { "q": "Do I need a good credit score?", "a": "A strong credit history helps, but we work with a panel of lenders that includes specialist lenders for non-standard credit profiles. We assess your full situation, not just your score." },
+      { "q": "Can I finance a private sale vehicle?", "a": "Yes. Many lenders will finance private sale purchases. There are some age and condition restrictions -we will clarify these when we assess your application." },
+      { "q": "Is a deposit required?", "a": "Not always. Many car loans are available with no deposit required, especially for new vehicles. A deposit can lower your rate and repayments, but it is not mandatory." }
+    ]
+  },
+  "cta": {
+    "heading": "Ready to get behind the wheel?",
+    "subtitle": "Get pre-approved today and walk into any dealership knowing exactly what you can afford.",
+    "primaryCta": "Get Pre-Approved",
+    "secondaryCta": "Explore Commercial Loans"
+  }
+},
+
+"commercialLoanPage": {
+  "breadcrumbHome": "Home",
+  "breadcrumbServices": "Services",
+  "breadcrumbCurrent": "Commercial Loan",
+  "pill": "Commercial Loan",
+  "heroTitle1": "Business lending that",
+  "heroTitleHighlight": "moves at your pace",
+  "heroSubtitle": "From commercial property to equipment finance and working capital -we structure business lending that supports your growth, not just your balance sheet.",
+  "ctaPrimary": "Speak to a Specialist",
+  "ctaSecondary": "View Products",
+  "quickStats": [
+    { "n": "65-70%", "l": "LVR Commercial" },
+    { "n": "2-4 wks", "l": "Avg. Approval" },
+    { "n": "$50K+", "l": "Loan Size" }
+  ],
+  "products": {
+    "label": "Products",
+    "heading": "Commercial lending solutions",
+    "subtitle": "Structured finance for every stage of your business journey.",
+    "items": [
+      { "title": "Commercial Property", "desc": "Purchase or refinance office, retail, industrial, or mixed-use property. We access both bank and non-bank commercial lenders." },
+      { "title": "Business Equipment Finance", "desc": "Fund machinery, vehicles, or technology with equipment loans, chattel mortgages, or leases structured for your cash flow." },
+      { "title": "Working Capital", "desc": "Business overdrafts, debtor finance, and short-term loans to keep operations moving through growth or seasonal gaps." },
+      { "title": "Development Finance", "desc": "Construction and development funding for residential, commercial, or mixed-use projects -from pre-sales to completion." },
+      { "title": "SMSF Lending", "desc": "Purchase investment property inside your self-managed super fund with a limited recourse borrowing arrangement (LRBA)." },
+      { "title": "Refinance & Restructure", "desc": "Review your existing business debt. We often find significant savings or improved terms for clients who have not reviewed recently." }
+    ]
+  },
+  "industries": {
+    "label": "Industries We Serve",
+    "heading": "We know your industry",
+    "subtitle": "Lender policy varies significantly by industry. Our experience across multiple sectors means faster, smarter applications.",
+    "items": ["Retail & Hospitality", "Healthcare & Allied Health", "Construction & Trades", "Professional Services", "Manufacturing", "Wholesale & Distribution", "Transport & Logistics", "Agriculture"]
+  },
+  "process": {
+    "label": "How We Work",
+    "heading": "Our commercial lending process",
+    "steps": [
+      { "title": "Business Assessment", "desc": "We review your financials, business structure, and objectives to understand what the right loan looks like for your situation." },
+      { "title": "Lender Matching", "desc": "Commercial lending is highly policy-specific. We shortlist lenders based on your industry, loan type, and risk profile." },
+      { "title": "Credit Packaging", "desc": "We prepare a comprehensive credit submission -financials, projections, security details -to give your application the best chance of approval." },
+      { "title": "Approval & Drawdown", "desc": "We manage the approval process, coordinate with solicitors, and ensure funds are drawn down efficiently." }
+    ]
+  },
+  "why": {
+    "label": "Why Open Lending",
+    "heading": "Commercial specialists, not generalists",
+    "subtitle": "Commercial lending is complex. Policy, security, and serviceability requirements vary enormously by lender and deal type. We navigate this on your behalf.",
+    "bullets": [
+      "Access to bank and non-bank commercial lenders",
+      "Specialist lenders for complex structures",
+      "Low-doc and alt-doc options available",
+      "Company, trust, and SMSF borrowing structures",
+      "Experienced with development and construction deals",
+      "Ongoing review to ensure your facility remains competitive"
+    ],
+    "cta": "Speak to a Specialist",
+    "products": [
+      { "label": "Commercial Property", "note": "Purchase, refinance, development" },
+      { "label": "Equipment Finance", "note": "Chattel mortgage, lease, hire purchase" },
+      { "label": "Working Capital", "note": "Overdraft, invoice finance, trade finance" },
+      { "label": "SMSF Lending", "note": "Limited recourse borrowing arrangements" }
+    ] 
+  },
+  "faq": {
+    "label": "FAQ",
+    "heading": "Commercial lending questions",
+    "items": [
+      { "q": "What LVR can I borrow to for commercial property?", "a": "Most lenders will lend up to 65-70% LVR for commercial property. Some specialist lenders may go higher with additional security or a strong borrower profile." },
+      { "q": "Do I need two years of financials?", "a": "Generally yes, but there are low-doc and alt-doc options for established businesses with strong cash flow. We assess the full picture, not just your tax returns." },
+      { "q": "Can a trust or company be the borrower?", "a": "Absolutely. Most commercial lending is structured through companies or trusts. We work with the entity structure that best suits your situation and tax position." },
+      { "q": "How long does commercial approval take?", "a": "Commercial deals typically take 2-4 weeks from submission to approval. Complex deals or development finance may take longer. We set realistic timelines upfront." }
+    ]
+  },
+  "cta": {
+    "heading": "Let's structure your business lending",
+    "subtitle": "Speak with a commercial lending specialist and get a clear plan for your next business finance requirement.",
+    "primaryCta": "Book a Consultation",
+    "secondaryCta": "Explore Home Loans"
+  }
+},
+
+"repaymentCalcPage": {
+  "breadcrumbHome": "Home",
+  "breadcrumbCurrent": "Repayment Calculator",
+  "pill": "Calculator",
+  "heroTitle": "Repayment Calculator",
+  "heroSubtitle": "Estimate your monthly, fortnightly, and weekly loan repayments instantly.",
+  "loanDetails": {
+    "heading": "Loan Details",
+    "loanAmountLabel": "Loan Amount",
+    "interestRateLabel": "Interest Rate",
+    "loanTermLabel": "Loan Term",
+    "yearsUnit": "years",
+    "repaymentTypeLabel": "Repayment Type",
+    "principalInterest": "Principal & Interest",
+    "interestOnly": "Interest Only"
+  },
+  "results": {
+    "monthlyRepayment": "Monthly Repayment",
+    "perMonth": "per month",
+    "fortnightly": "Fortnightly",
+    "weekly": "Weekly",
+    "loanSummary": "Loan Summary",
+    "loanAmount": "Loan Amount",
+    "totalInterest": "Total Interest",
+    "totalRepayment": "Total Repayment",
+    "principal": "Principal",
+    "interest": "Interest"
+  },
+  "cta": "Speak to a Broker",
+  "disclaimer": "* This calculator provides estimates only and does not constitute financial advice. Results are based on the inputs provided and assume a constant interest rate. Actual repayments may vary. Please speak to one of our mortgage specialists for personalised advice.",
+  "otherCalculators": {
+    "heading": "Other Calculators",
+    "openCalculator": "Open Calculator",
+    "items": [
+      { "title": "Stamp Duty Calculator", "desc": "Calculate stamp duty costs for your property purchase." },
+      { "title": "Borrowing Power Calculator", "desc": "Find out how much you may be able to borrow." }
+    ]
+  }
+},
+
+"stampDutyCalcPage": {
+  "breadcrumbHome": "Home",
+  "breadcrumbCurrent": "Stamp Duty Calculator",
+  "pill": "Calculator",
+  "heroTitle": "Stamp Duty Calculator",
+  "heroSubtitle": "Calculate stamp duty for all Australian states and territories, including first home buyer concessions.",
+  "propertyDetails": {
+    "heading": "Property Details",
+    "priceLabel": "Property Price",
+    "stateLabel": "State / Territory",
+    "buyerTypeLabel": "Buyer Type",
+    "buyerTypes": { "owner": "Owner Occupier", "investor": "Investor", "fhb": "First Home Buyer" },
+    "propertyTypeLabel": "Property Type",
+    "propertyTypes": { "established": "Established", "new": "New Build", "vacant": "Vacant Land" }
+  },
+  "results": {
+    "stampDuty": "Stamp Duty",
+    "exemptionNote": "First home buyer exemption applies (under ${limit}K)",
+    "concessionNote": "First home buyer concession applies (under ${limit}K)",
+    "breakdownHeading": "Purchase Cost Breakdown",
+    "propertyPrice": "Property Price",
+    "stampDutyBeforeConcession": "Stamp Duty (before concession)",
+    "fhbConcession": "FHB Concession / Exemption",
+    "stampDutyRow": "Stamp Duty",
+    "conveyancing": "Conveyancing (est.)",
+    "totalUpfront": "Total Upfront Costs"
+  },
+  "cta": "Speak to a Broker",
+  "disclaimer": "* Stamp duty calculations are estimates based on general rate schedules and may not reflect all concessions, exemptions, or surcharges applicable to your situation. Rates are subject to change. Please verify with your state revenue office or speak to a conveyancer.",
+  "otherCalculators": {
+    "heading": "Other Calculators",
+    "openCalculator": "Open Calculator",
+    "items": [
+      { "title": "Repayment Calculator", "desc": "Estimate your monthly, fortnightly, and weekly repayments." },
+      { "title": "Borrowing Power Calculator", "desc": "Find out how much you may be able to borrow." }
+    ]
+  }
+},
+
+"borrowingCalcPage": {
+  "breadcrumbHome": "Home",
+  "breadcrumbCurrent": "Borrowing Power Calculator",
+  "pill": "Calculator",
+  "heroTitle": "Borrowing Power Calculator",
+  "heroSubtitle": "Estimate how much you may be able to borrow based on your annual income and overall financial position.",
+  "income": {
+    "heading": "Income",
+    "yourIncomeLabel": "Your Annual Income",
+    "employmentTypeLabel": "Employment Type",
+    "employmentTypes": { "fulltime": "Full-time", "parttime": "Part-time", "casual": "Casual", "selfemployed": "Self-employed" },
+    "includePartnerLabel": "Include Partner's Income?",
+    "partnerIncomeLabel": "Partner Annual Income"
+  },
+  "expenses": {
+    "heading": "Expenses & Commitments",
+    "livingExpensesLabel": "Monthly Living Expenses",
+    "existingLoanLabel": "Existing Loan Repayments",
+    "creditCardLabel": "Credit Card Limits",
+    "dependantsLabel": "Dependants"
+  },
+  "interestRate": {
+    "label": "Interest Rate",
+    "note": "Monthly repayment is estimated using the selected interest rate."
+  },
+  "results": {
+    "mainLabel": "Estimated Borrowing Power",
+    "basedOn": "based on 5–8× annual income",
+    "combinedIncome": "Combined annual income: ${amount}",
+    "conservative": "Conservative",
+    "conservativeNote": "5× annual income",
+    "optimistic": "Optimistic",
+    "optimisticNote": "8× annual income",
+    "typicalEstimate": "Typical Estimate",
+    "annualIncome": "Annual Income",
+    "incomeMultiple": "Income Multiple",
+    "estimatedLoan": "Estimated Loan",
+    "range": "Range",
+    "monthlyRepaymentEstimate": "Monthly Repayment Estimate",
+    "interestRateRow": "Interest Rate",
+    "loanTerm": "Loan Term",
+    "loanTermValue": "30 years",
+    "monthlyRepayment": "Monthly Repayment"
+  },
+  "disclaimerBox": "💡 These figures are estimates only. A simple 5–8× income calculation is not a lender assessment and actual borrowing capacity depends on your income, expenses, debts, dependants, credit profile and lender policy. Book a call for an accurate assessment.",
+  "cta": "Get an Accurate Assessment",
+  "disclaimer": "* This calculator provides a general estimate only and does not constitute financial advice. The estimated borrowing range is calculated using 5–8 times combined annual income. Actual borrowing capacity is assessed differently by each lender and is subject to credit assessment, verification of income and lender policy.",
+  "otherCalculators": {
+    "heading": "Other Calculators",
+    "openCalculator": "Open Calculator",
+    "items": [
+      { "title": "Repayment Calculator", "desc": "Estimate your monthly, fortnightly, and weekly repayments." },
+      { "title": "Stamp Duty Calculator", "desc": "Calculate stamp duty costs for your property purchase." }
+    ]
+  }
+}
+
+
+
+
+}

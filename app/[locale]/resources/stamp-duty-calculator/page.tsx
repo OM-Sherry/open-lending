@@ -1,6 +1,8 @@
 'use client'
-import Link from 'next/link'
+
 import { useState, useMemo } from 'react'
+import { Link } from '@/i18n/navigation'
+import { useTranslations } from 'next-intl'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 import { ChevronRight, ArrowRight } from 'lucide-react'
@@ -115,6 +117,8 @@ function calcStampDuty(price: number, state: string): number {
 }
 
 export default function StampDutyCalculatorPage() {
+  const t = useTranslations('stampDutyCalcPage')
+
   const [price, setPrice] = useState(750000)
   const [state, setState] = useState('NSW')
   const [buyerType, setBuyerType] = useState<'owner' | 'investor' | 'fhb'>('owner')
@@ -124,15 +128,18 @@ export default function StampDutyCalculatorPage() {
     let duty = calcStampDuty(price, state)
     const config = STATE_RATES[state]
     let fhbDiscount = 0
-    let note = ''
+    let noteType: 'exemption' | 'concession' | '' = ''
+    let noteLimit = 0
 
     if (buyerType === 'fhb' && config) {
       if (price <= config.fhbExemptionLimit && config.fhbExemptionLimit > 0) {
         fhbDiscount = duty
-        note = `First home buyer exemption applies (under $${(config.fhbExemptionLimit / 1000).toFixed(0)}K)`
+        noteType = 'exemption'
+        noteLimit = config.fhbExemptionLimit / 1000
       } else if (price <= config.fhbConcessionLimit && config.fhbConcessionLimit > 0) {
         fhbDiscount = duty * 0.5
-        note = `First home buyer concession applies (under $${(config.fhbConcessionLimit / 1000).toFixed(0)}K)`
+        noteType = 'concession'
+        noteLimit = config.fhbConcessionLimit / 1000
       }
     }
 
@@ -141,10 +148,16 @@ export default function StampDutyCalculatorPage() {
     const conveyancing = 1500
     const total = finalDuty + conveyancing
 
-    return { duty: finalDuty, originalDuty: duty, fhbDiscount, lmi, conveyancing, total, note }
+    return { duty: finalDuty, originalDuty: duty, fhbDiscount, lmi, conveyancing, total, noteType, noteLimit }
   }, [price, state, buyerType])
 
   const fmt = (n: number) => n.toLocaleString('en-AU', { minimumFractionDigits: 0, maximumFractionDigits: 0 })
+
+  const buyerTypeLabel = (v: 'owner' | 'investor' | 'fhb') =>
+    v === 'fhb' ? t('propertyDetails.buyerTypes.fhb') : v === 'investor' ? t('propertyDetails.buyerTypes.investor') : t('propertyDetails.buyerTypes.owner')
+
+  const otherCalcItems = t.raw('otherCalculators.items') as { title: string; desc: string }[]
+  const otherCalcHrefs = ['/resources/repayment-calculator', '/resources/loan-borrowing-calculator']
 
   return (
     <>
@@ -154,14 +167,14 @@ export default function StampDutyCalculatorPage() {
         <div style={{ position: 'absolute', top: -100, right: -100, width: 400, height: 400, borderRadius: '50%', background: 'radial-gradient(circle, rgba(59,111,255,0.2) 0%, transparent 70%)', pointerEvents: 'none' }} />
         <div className="container" style={{ position: 'relative', zIndex: 1 }}>
           <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '1.5rem' }}>
-            <Link href="/" style={{ color: 'rgba(255,255,255,0.45)', fontSize: '0.85rem', textDecoration: 'none' }}>Home</Link>
+            <Link href="/" style={{ color: 'rgba(255,255,255,0.45)', fontSize: '0.85rem', textDecoration: 'none' }}>{t('breadcrumbHome')}</Link>
             <ChevronRight size={14} color="rgba(255,255,255,0.3)" />
-            <span style={{ color: '#93B4FF', fontSize: '0.85rem' }}>Stamp Duty Calculator</span>
+            <span style={{ color: '#93B4FF', fontSize: '0.85rem' }}>{t('breadcrumbCurrent')}</span>
           </div>
-          <div className="pill" style={{ marginBottom: '1.25rem' }}>Calculator</div>
-          <h1 className="heading-1" style={{ color: 'white', marginBottom: '0.75rem' }}>Stamp Duty Calculator</h1>
+          <div className="pill" style={{ marginBottom: '1.25rem' }}>{t('pill')}</div>
+          <h1 className="heading-1" style={{ color: 'white', marginBottom: '0.75rem' }}>{t('heroTitle')}</h1>
           <p style={{ color: 'rgba(255,255,255,0.65)', fontSize: '1.05rem', maxWidth: 480 }}>
-            Calculate stamp duty for all Australian states and territories, including first home buyer concessions.
+            {t('heroSubtitle')}
           </p>
         </div>
       </section>
@@ -172,12 +185,12 @@ export default function StampDutyCalculatorPage() {
 
             {/* Inputs */}
             <div className="card" style={{ padding: '2.5rem' }}>
-              <h2 className="heading-3" style={{ color: 'var(--navy)', marginBottom: '2rem' }}>Property Details</h2>
+              <h2 className="heading-3" style={{ color: 'var(--navy)', marginBottom: '2rem' }}>{t('propertyDetails.heading')}</h2>
 
               {/* Price */}
               <div style={{ marginBottom: '2rem' }}>
                 <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '0.75rem' }}>
-                  <label style={{ fontWeight: 600, fontSize: '0.9rem', color: 'var(--navy)' }}>Property Price</label>
+                  <label style={{ fontWeight: 600, fontSize: '0.9rem', color: 'var(--navy)' }}>{t('propertyDetails.priceLabel')}</label>
                   <span style={{ fontWeight: 700, color: 'var(--blue)' }}>${fmt(price)}</span>
                 </div>
                 <input type="range" min={100000} max={5000000} step={10000} value={price}
@@ -190,7 +203,7 @@ export default function StampDutyCalculatorPage() {
 
               {/* State */}
               <div style={{ marginBottom: '1.75rem' }}>
-                <label style={{ fontWeight: 600, fontSize: '0.9rem', color: 'var(--navy)', display: 'block', marginBottom: '0.75rem' }}>State / Territory</label>
+                <label style={{ fontWeight: 600, fontSize: '0.9rem', color: 'var(--navy)', display: 'block', marginBottom: '0.75rem' }}>{t('propertyDetails.stateLabel')}</label>
                 <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.5rem' }}>
                   {Object.keys(STATE_RATES).map(s => (
                     <button key={s} onClick={() => setState(s)}
@@ -207,34 +220,34 @@ export default function StampDutyCalculatorPage() {
 
               {/* Buyer Type */}
               <div style={{ marginBottom: '1.75rem' }}>
-                <label style={{ fontWeight: 600, fontSize: '0.9rem', color: 'var(--navy)', display: 'block', marginBottom: '0.75rem' }}>Buyer Type</label>
+                <label style={{ fontWeight: 600, fontSize: '0.9rem', color: 'var(--navy)', display: 'block', marginBottom: '0.75rem' }}>{t('propertyDetails.buyerTypeLabel')}</label>
                 <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
-                  {[['owner', 'Owner Occupier'], ['investor', 'Investor'], ['fhb', 'First Home Buyer']].map(([v, l]) => (
-                    <button key={v} onClick={() => setBuyerType(v as 'owner' | 'investor' | 'fhb')}
+                  {(['owner', 'investor', 'fhb'] as const).map(v => (
+                    <button key={v} onClick={() => setBuyerType(v)}
                       style={{
                         padding: '0.75rem 1rem', borderRadius: '0.5rem', border: '2px solid', textAlign: 'left',
                         borderColor: buyerType === v ? 'var(--blue)' : 'var(--border)',
                         background: buyerType === v ? 'var(--sky)' : 'white',
                         color: buyerType === v ? 'var(--blue)' : 'var(--muted)',
                         fontWeight: 600, fontSize: '0.875rem', cursor: 'pointer'
-                      }}>{l}</button>
+                      }}>{buyerTypeLabel(v)}</button>
                   ))}
                 </div>
               </div>
 
               {/* Property Type */}
               <div>
-                <label style={{ fontWeight: 600, fontSize: '0.9rem', color: 'var(--navy)', display: 'block', marginBottom: '0.75rem' }}>Property Type</label>
+                <label style={{ fontWeight: 600, fontSize: '0.9rem', color: 'var(--navy)', display: 'block', marginBottom: '0.75rem' }}>{t('propertyDetails.propertyTypeLabel')}</label>
                 <div style={{ display: 'flex', gap: '0.5rem' }}>
-                  {[['established', 'Established'], ['new', 'New Build'], ['vacant', 'Vacant Land']].map(([v, l]) => (
-                    <button key={v} onClick={() => setPropertyType(v as 'established' | 'new' | 'vacant')}
+                  {(['established', 'new', 'vacant'] as const).map(v => (
+                    <button key={v} onClick={() => setPropertyType(v)}
                       style={{
                         flex: 1, padding: '0.625rem', borderRadius: '0.5rem', border: '2px solid',
                         borderColor: propertyType === v ? 'var(--blue)' : 'var(--border)',
                         background: propertyType === v ? 'var(--sky)' : 'white',
                         color: propertyType === v ? 'var(--blue)' : 'var(--muted)',
                         fontWeight: 600, fontSize: '0.78rem', cursor: 'pointer'
-                      }}>{l}</button>
+                      }}>{t(`propertyDetails.propertyTypes.${v}`)}</button>
                   ))}
                 </div>
               </div>
@@ -243,56 +256,60 @@ export default function StampDutyCalculatorPage() {
             {/* Results */}
             <div style={{ display: 'flex', flexDirection: 'column', gap: '1.25rem' }}>
               <div style={{ background: 'linear-gradient(135deg, var(--navy) 0%, #1B3A6B 100%)', borderRadius: '1rem', padding: '2.5rem', textAlign: 'center' }}>
-                <div style={{ color: 'rgba(255,255,255,0.55)', fontSize: '0.85rem', fontWeight: 600, letterSpacing: '0.08em', textTransform: 'uppercase', marginBottom: '0.5rem' }}>Stamp Duty</div>
+                <div style={{ color: 'rgba(255,255,255,0.55)', fontSize: '0.85rem', fontWeight: 600, letterSpacing: '0.08em', textTransform: 'uppercase', marginBottom: '0.5rem' }}>{t('results.stampDuty')}</div>
                 <div style={{ color: 'white', fontWeight: 800, fontSize: '3rem', letterSpacing: '-0.03em', lineHeight: 1 }}>${fmt(results.duty)}</div>
-                <div style={{ color: 'rgba(255,255,255,0.45)', fontSize: '0.8rem', marginTop: '0.5rem' }}>{state} · {buyerType === 'fhb' ? 'First Home Buyer' : buyerType === 'investor' ? 'Investor' : 'Owner Occupier'}</div>
+                <div style={{ color: 'rgba(255,255,255,0.45)', fontSize: '0.8rem', marginTop: '0.5rem' }}>{state} · {buyerTypeLabel(buyerType)}</div>
               </div>
 
-              {results.note && (
+              {results.noteType && (
                 <div style={{ background: '#ECFDF5', border: '1px solid #6EE7B7', borderRadius: '0.875rem', padding: '1rem 1.25rem' }}>
-                  <span style={{ color: '#065F46', fontSize: '0.875rem', fontWeight: 600 }}>-{results.note}</span>
+                  <span style={{ color: '#065F46', fontSize: '0.875rem', fontWeight: 600 }}>
+                    {results.noteType === 'exemption'
+                      ? t('results.exemptionNote', { limit: results.noteLimit.toFixed(0) })
+                      : t('results.concessionNote', { limit: results.noteLimit.toFixed(0) })}
+                  </span>
                 </div>
               )}
 
               <div className="card" style={{ padding: '1.75rem' }}>
-                <h3 style={{ fontWeight: 700, color: 'var(--navy)', marginBottom: '1.25rem', fontSize: '0.95rem' }}>Purchase Cost Breakdown</h3>
+                <h3 style={{ fontWeight: 700, color: 'var(--navy)', marginBottom: '1.25rem', fontSize: '0.95rem' }}>{t('results.breakdownHeading')}</h3>
                 {[
-                  { label: 'Property Price', val: `$${fmt(price)}` },
-                  ...(results.fhbDiscount > 0 ? [{ label: 'Stamp Duty (before concession)', val: `$${fmt(results.originalDuty)}` }, { label: 'FHB Concession / Exemption', val: `-$${fmt(results.fhbDiscount)}` }] : []),
-                  { label: 'Stamp Duty', val: `$${fmt(results.duty)}` },
-                  { label: 'Conveyancing (est.)', val: `$${fmt(results.conveyancing)}` },
-                  { label: 'Total Upfront Costs', val: `$${fmt(results.total)}`, highlight: true },
+                  { label: t('results.propertyPrice'), val: `$${fmt(price)}`, highlight: false },
+                  ...(results.fhbDiscount > 0 ? [
+                    { label: t('results.stampDutyBeforeConcession'), val: `$${fmt(results.originalDuty)}`, highlight: false },
+                    { label: t('results.fhbConcession'), val: `-$${fmt(results.fhbDiscount)}`, highlight: false },
+                  ] : []),
+                  { label: t('results.stampDutyRow'), val: `$${fmt(results.duty)}`, highlight: false },
+                  { label: t('results.conveyancing'), val: `$${fmt(results.conveyancing)}`, highlight: false },
+                  { label: t('results.totalUpfront'), val: `$${fmt(results.total)}`, highlight: true },
                 ].map(r => (
                   <div key={r.label} style={{ display: 'flex', justifyContent: 'space-between', padding: '0.75rem 0', borderBottom: '1px solid var(--border)' }}>
                     <span style={{ fontSize: '0.9rem', color: 'var(--muted)' }}>{r.label}</span>
-                    <span style={{ fontWeight: (r as any).highlight ? 800 : 600, color: (r as any).highlight ? 'var(--blue)' : 'var(--navy)', fontSize: (r as any).highlight ? '1.05rem' : '0.95rem' }}>{r.val}</span>
+                    <span style={{ fontWeight: r.highlight ? 800 : 600, color: r.highlight ? 'var(--blue)' : 'var(--navy)', fontSize: r.highlight ? '1.05rem' : '0.95rem' }}>{r.val}</span>
                   </div>
                 ))}
               </div>
 
               <Link href="/#contact" className="btn-primary" style={{ justifyContent: 'center' }}>
-                Speak to a Broker <ArrowRight size={16} />
+                {t('cta')} <ArrowRight size={16} />
               </Link>
             </div>
           </div>
           <p style={{ fontSize: '0.75rem', color: 'var(--muted)', marginTop: '2rem', lineHeight: 1.6, maxWidth: 760 }}>
-            * Stamp duty calculations are estimates based on general rate schedules and may not reflect all concessions, exemptions, or surcharges applicable to your situation. Rates are subject to change. Please verify with your state revenue office or speak to a conveyancer.
+            {t('disclaimer')}
           </p>
         </div>
       </section>
 
       <section className="section-sm" style={{ background: 'var(--white)' }}>
         <div className="container">
-          <h3 className="heading-3" style={{ marginBottom: '1.5rem', color: 'var(--navy)' }}>Other Calculators</h3>
+          <h3 className="heading-3" style={{ marginBottom: '1.5rem', color: 'var(--navy)' }}>{t('otherCalculators.heading')}</h3>
           <div className="grid-2">
-            {[
-              { title: 'Repayment Calculator', desc: 'Estimate your monthly, fortnightly, and weekly repayments.', href: '/resources/repayment-calculator' },
-              { title: 'Borrowing Power Calculator', desc: 'Find out how much you may be able to borrow.', href: '/resources/loan-borrowing-calculator' },
-            ].map(c => (
-              <Link key={c.title} href={c.href} className="card" style={{ textDecoration: 'none', display: 'block' }}>
+            {otherCalcItems.map((c, index) => (
+              <Link key={c.title} href={otherCalcHrefs[index]} className="card" style={{ textDecoration: 'none', display: 'block' }}>
                 <h4 style={{ fontWeight: 700, color: 'var(--navy)', marginBottom: '0.5rem' }}>{c.title}</h4>
                 <p className="body" style={{ fontSize: '0.9rem', marginBottom: '1rem' }}>{c.desc}</p>
-                <span style={{ color: 'var(--blue)', fontWeight: 600, fontSize: '0.875rem', display: 'flex', alignItems: 'center', gap: '0.4rem' }}>Open Calculator <ArrowRight size={14} /></span>
+                <span style={{ color: 'var(--blue)', fontWeight: 600, fontSize: '0.875rem', display: 'flex', alignItems: 'center', gap: '0.4rem' }}>{t('otherCalculators.openCalculator')} <ArrowRight size={14} /></span>
               </Link>
             ))}
           </div>
@@ -303,4 +320,3 @@ export default function StampDutyCalculatorPage() {
     </>
   )
 }
-

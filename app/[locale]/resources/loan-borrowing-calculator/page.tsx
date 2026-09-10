@@ -1,12 +1,15 @@
 'use client'
 
-import Link from 'next/link'
 import { useState, useMemo } from 'react'
+import { Link } from '@/i18n/navigation'
+import { useTranslations } from 'next-intl'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 import { ChevronRight, ArrowRight, Plus, Minus } from 'lucide-react'
 
 export default function BorrowingCalculatorPage() {
+  const t = useTranslations('borrowingCalcPage')
+
   const [income, setIncome] = useState(120000)
   const [partnerIncome, setPartnerIncome] = useState(0)
   const [includePartner, setIncludePartner] = useState(false)
@@ -96,6 +99,11 @@ export default function BorrowingCalculatorPage() {
     color: 'var(--navy)',
   }
 
+  const employmentTypes = ['fulltime', 'parttime', 'casual', 'selfemployed'] as const
+
+  const otherCalcItems = t.raw('otherCalculators.items') as { title: string; desc: string }[]
+  const otherCalcHrefs = ['/resources/repayment-calculator', '/resources/stamp-duty-calculator']
+
   return (
     <>
       <Navbar />
@@ -148,7 +156,7 @@ export default function BorrowingCalculatorPage() {
                 textDecoration: 'none',
               }}
             >
-              Home
+              {t('breadcrumbHome')}
             </Link>
 
             <ChevronRight
@@ -162,7 +170,7 @@ export default function BorrowingCalculatorPage() {
                 fontSize: '0.85rem',
               }}
             >
-              Borrowing Power Calculator
+              {t('breadcrumbCurrent')}
             </span>
           </div>
 
@@ -172,7 +180,7 @@ export default function BorrowingCalculatorPage() {
               marginBottom: '1.25rem',
             }}
           >
-             Calculator
+            {t('pill')}
           </div>
 
           <h1
@@ -182,7 +190,7 @@ export default function BorrowingCalculatorPage() {
               marginBottom: '0.75rem',
             }}
           >
-            Borrowing Power Calculator
+            {t('heroTitle')}
           </h1>
 
           <p
@@ -192,8 +200,7 @@ export default function BorrowingCalculatorPage() {
               maxWidth: 520,
             }}
           >
-            Estimate how much you may be able to borrow based on your annual
-            income and overall financial position.
+            {t('heroSubtitle')}
           </p>
         </div>
       </section>
@@ -237,7 +244,7 @@ export default function BorrowingCalculatorPage() {
                     fontSize: '1rem',
                   }}
                 >
-                  Income
+                  {t('income.heading')}
                 </h3>
 
                 {/* Your Income */}
@@ -254,7 +261,7 @@ export default function BorrowingCalculatorPage() {
                     }}
                   >
                     <label style={labelStyle}>
-                      Your Annual Income
+                      {t('income.yourIncomeLabel')}
                     </label>
 
                     <span
@@ -300,7 +307,7 @@ export default function BorrowingCalculatorPage() {
                   }}
                 >
                   <label style={labelStyle}>
-                    Employment Type
+                    {t('income.employmentTypeLabel')}
                   </label>
 
                   <div
@@ -311,18 +318,11 @@ export default function BorrowingCalculatorPage() {
                       marginTop: '0.75rem',
                     }}
                   >
-                    {[
-                      ['fulltime', 'Full-time'],
-                      ['parttime', 'Part-time'],
-                      ['casual', 'Casual'],
-                      ['selfemployed', 'Self-employed'],
-                    ].map(([v, l]) => (
+                    {employmentTypes.map((v) => (
                       <button
                         key={v}
                         onClick={() =>
-                          setEmploymentType(
-                            v as typeof employmentType
-                          )
+                          setEmploymentType(v)
                         }
                         style={{
                           padding: '0.5rem 0.875rem',
@@ -345,7 +345,7 @@ export default function BorrowingCalculatorPage() {
                           cursor: 'pointer',
                         }}
                       >
-                        {l}
+                        {t(`income.employmentTypes.${v}`)}
                       </button>
                     ))}
                   </div>
@@ -367,7 +367,7 @@ export default function BorrowingCalculatorPage() {
                     }}
                   >
                     <label style={labelStyle}>
-                      Include Partner's Income?
+                      {t('income.includePartnerLabel')}
                     </label>
 
                     <button
@@ -418,7 +418,7 @@ export default function BorrowingCalculatorPage() {
                             color: 'var(--muted)',
                           }}
                         >
-                          Partner Annual Income
+                          {t('income.partnerIncomeLabel')}
                         </label>
 
                         <span
@@ -464,7 +464,7 @@ export default function BorrowingCalculatorPage() {
                     fontSize: '1rem',
                   }}
                 >
-                  Expenses & Commitments
+                  {t('expenses.heading')}
                 </h3>
 
                 {/* Living Expenses */}
@@ -481,7 +481,7 @@ export default function BorrowingCalculatorPage() {
                     }}
                   >
                     <label style={labelStyle}>
-                      Monthly Living Expenses
+                      {t('expenses.livingExpensesLabel')}
                     </label>
 
                     <span
@@ -521,7 +521,7 @@ export default function BorrowingCalculatorPage() {
                     }}
                   >
                     <label style={labelStyle}>
-                      Existing Loan Repayments
+                      {t('expenses.existingLoanLabel')}
                     </label>
 
                     <span
@@ -561,7 +561,7 @@ export default function BorrowingCalculatorPage() {
                     }}
                   >
                     <label style={labelStyle}>
-                      Credit Card Limits
+                      {t('expenses.creditCardLabel')}
                     </label>
 
                     <span
@@ -596,7 +596,7 @@ export default function BorrowingCalculatorPage() {
                       marginBottom: '0.75rem',
                     }}
                   >
-                    Dependants
+                    {t('expenses.dependantsLabel')}
                   </label>
 
                   <div
@@ -686,7 +686,7 @@ export default function BorrowingCalculatorPage() {
                   }}
                 >
                   <label style={labelStyle}>
-                    Interest Rate
+                    {t('interestRate.label')}
                   </label>
 
                   <span
@@ -720,8 +720,7 @@ export default function BorrowingCalculatorPage() {
                     marginTop: '0.5rem',
                   }}
                 >
-                  Monthly repayment is estimated using the
-                  selected interest rate.
+                  {t('interestRate.note')}
                 </p>
               </div>
             </div>
@@ -754,7 +753,7 @@ export default function BorrowingCalculatorPage() {
                     marginBottom: '0.5rem',
                   }}
                 >
-                  Estimated Borrowing Power
+                  {t('results.mainLabel')}
                 </div>
 
                 <div
@@ -777,7 +776,7 @@ export default function BorrowingCalculatorPage() {
                     marginTop: '0.75rem',
                   }}
                 >
-                  based on 5–8× annual income
+                  {t('results.basedOn')}
                 </div>
 
                 <div
@@ -787,8 +786,7 @@ export default function BorrowingCalculatorPage() {
                     marginTop: '0.5rem',
                   }}
                 >
-                  Combined annual income: $
-                  {fmt(results.totalIncome)}
+                  {t('results.combinedIncome', { amount: fmt(results.totalIncome) })}
                 </div>
               </div>
 
@@ -802,14 +800,14 @@ export default function BorrowingCalculatorPage() {
               >
                 {[
                   {
-                    label: 'Conservative',
+                    label: t('results.conservative'),
                     val: `$${fmt(results.conservative)}`,
-                    note: '5× annual income',
+                    note: t('results.conservativeNote'),
                   },
                   {
-                    label: 'Optimistic',
+                    label: t('results.optimistic'),
                     val: `$${fmt(results.optimistic)}`,
-                    note: '8× annual income',
+                    note: t('results.optimisticNote'),
                   },
                 ].map((r) => (
                   <div
@@ -871,7 +869,7 @@ export default function BorrowingCalculatorPage() {
                     fontSize: '0.95rem',
                   }}
                 >
-                  Typical Estimate
+                  {t('results.typicalEstimate')}
                 </h3>
 
                 <div
@@ -889,7 +887,7 @@ export default function BorrowingCalculatorPage() {
                       color: 'var(--muted)',
                     }}
                   >
-                    Annual Income
+                    {t('results.annualIncome')}
                   </span>
 
                   <span
@@ -918,7 +916,7 @@ export default function BorrowingCalculatorPage() {
                       color: 'var(--muted)',
                     }}
                   >
-                    Income Multiple
+                    {t('results.incomeMultiple')}
                   </span>
 
                   <span
@@ -947,7 +945,7 @@ export default function BorrowingCalculatorPage() {
                       color: 'var(--muted)',
                     }}
                   >
-                    Estimated Loan
+                    {t('results.estimatedLoan')}
                   </span>
 
                   <span
@@ -974,7 +972,7 @@ export default function BorrowingCalculatorPage() {
                       color: 'var(--muted)',
                     }}
                   >
-                    Range
+                    {t('results.range')}
                   </span>
 
                   <span
@@ -1004,24 +1002,24 @@ export default function BorrowingCalculatorPage() {
                     fontSize: '0.95rem',
                   }}
                 >
-                  Monthly Repayment Estimate
+                  {t('results.monthlyRepaymentEstimate')}
                 </h3>
 
                 {[
                   {
-                    label: 'Estimated Loan',
+                    label: t('results.estimatedLoan'),
                     val: `$${fmt(results.borrowing)}`,
                   },
                   {
-                    label: 'Interest Rate',
+                    label: t('results.interestRateRow'),
                     val: `${interestRate.toFixed(2)}% p.a.`,
                   },
                   {
-                    label: 'Loan Term',
-                    val: '30 years',
+                    label: t('results.loanTerm'),
+                    val: t('results.loanTermValue'),
                   },
                   {
-                    label: 'Monthly Repayment',
+                    label: t('results.monthlyRepayment'),
                     val: `$${fmtDec(results.monthly)}`,
                     highlight: true,
                   },
@@ -1080,13 +1078,7 @@ export default function BorrowingCalculatorPage() {
                     fontWeight: 500,
                   }}
                 >
-                  💡 These figures are estimates only. A
-                  simple 5–8× income calculation is not a
-                  lender assessment and actual borrowing
-                  capacity depends on your income, expenses,
-                  debts, dependants, credit profile and
-                  lender policy. Book a call for an accurate
-                  assessment.
+                  {t('disclaimerBox')}
                 </p>
               </div>
 
@@ -1098,7 +1090,7 @@ export default function BorrowingCalculatorPage() {
                   justifyContent: 'center',
                 }}
               >
-                Get an Accurate Assessment
+                {t('cta')}
                 <ArrowRight size={16} />
               </Link>
             </div>
@@ -1109,17 +1101,11 @@ export default function BorrowingCalculatorPage() {
               fontSize: '0.75rem',
               color: 'var(--muted)',
               marginTop: '2rem',
-              lineHeight: 1.6,
+              lineHeight: 1.6, 
               maxWidth: 760,
             }}
           >
-            * This calculator provides a general estimate
-            only and does not constitute financial advice.
-            The estimated borrowing range is calculated using
-            5–8 times combined annual income. Actual
-            borrowing capacity is assessed differently by
-            each lender and is subject to credit assessment,
-            verification of income and lender policy.
+            {t('disclaimer')}
           </p>
         </div>
       </section>
@@ -1139,25 +1125,14 @@ export default function BorrowingCalculatorPage() {
               color: 'var(--navy)',
             }}
           >
-            Other Calculators
+            {t('otherCalculators.heading')}
           </h3>
 
           <div className="grid-2">
-            {[
-              {
-                title: 'Repayment Calculator',
-                desc: 'Estimate your monthly, fortnightly, and weekly repayments.',
-                href: '/resources/repayment-calculator',
-              },
-              {
-                title: 'Stamp Duty Calculator',
-                desc: 'Calculate stamp duty costs for your property purchase.',
-                href: '/resources/stamp-duty-calculator',
-              },
-            ].map((c) => (
+            {otherCalcItems.map((c, index) => (
               <Link
                 key={c.title}
-                href={c.href}
+                href={otherCalcHrefs[index]}
                 className="card"
                 style={{
                   textDecoration: 'none',
@@ -1192,9 +1167,9 @@ export default function BorrowingCalculatorPage() {
                     display: 'flex',
                     alignItems: 'center',
                     gap: '0.4rem',
-                  }}
+                  }}  
                 >
-                  Open Calculator
+                  {t('otherCalculators.openCalculator')}
                   <ArrowRight size={14} />
                 </span>
               </Link>

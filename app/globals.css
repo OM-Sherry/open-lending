@@ -436,24 +436,24 @@ nav {
   isolation: isolate;
 
   background:
-    radial-gradient(
-      circle at 20% 25%,
-      rgba(155, 85, 233, 0.16),
-      transparent 35%
-    ),
-    radial-gradient(
-      circle at 80% 70%,
-      rgba(123, 53, 201, 0.15),
-      transparent 38%
-    ),
-    linear-gradient(
-      135deg,
-      #0b0711 0%,
-      #170a29 48%,
-      #10071d 75%,
-      #08070d 100%
-    );
-
+  radial-gradient(
+    circle at 20% 25%,
+    rgba(59, 111, 255, 0.16),
+    transparent 35%
+  ),
+  radial-gradient(
+    circle at 80% 70%,
+    rgba(27, 79, 216, 0.15),
+    transparent 38%
+  ),
+  linear-gradient(
+    135deg,
+    #0a0e14 0%,
+    #0d2347 48%,
+    #0a1a33 75%,
+    #060a10 100%
+  );
+  
   background-size: 140% 140%;
   animation: process-gradient-shift 18s ease-in-out infinite alternate;
 }
@@ -478,7 +478,7 @@ nav {
   height: 600px;
   top: -260px;
   right: -120px;
-  background: rgba(143, 79, 255, 0.48);
+  background: rgba(59, 111, 255, 0.48);
   animation: process-aurora-one 15s ease-in-out infinite alternate;
 }
 
@@ -487,7 +487,7 @@ nav {
   height: 500px;
   left: 5%;
   bottom: -310px;
-  background: rgba(91, 47, 189, 0.32);
+  background: rgba(27, 79, 216, 0.32);
   animation: process-aurora-two 18s ease-in-out infinite alternate;
 }
 
