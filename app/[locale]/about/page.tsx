@@ -27,7 +27,7 @@ export default function AboutPage() {
             <span style={{ color: '#8F6BFF', fontSize: '0.85rem' }}>{t('breadcrumbCurrent')}</span>
           </div>
           <div className="pill" style={{ marginBottom: '1.5rem' }}>{t('pill')}</div>
-          <h1 className="display" style={{ color: 'white', maxWidth: 680, marginBottom: '1.5rem' }}>
+          <h1 className="display" style={{ color: 'white', maxWidth: 1000, marginBottom: '1.5rem' }}>
             {t('heroTitle1')}<br /><span style={{ color: '#93B4FF' }}>{t('heroTitleHighlight')}</span>
           </h1>
           <p style={{ color: 'rgba(255,255,255,0.7)', fontSize: '1.15rem', lineHeight: 1.75, maxWidth: 580, marginBottom: '2.5rem' }}>

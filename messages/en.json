@@ -342,7 +342,7 @@
   "ctaSecondary": "Talk to a Broker",
   "stats": [
     { "n": "6", "l": "Clear Steps" },
-    { "n": "500+", "l": "Loans Settled" },
+    { "n": "1000+", "l": "Loans Settled" },
     { "n": "1 Day", "l": "Avg. Response Time" }
   ],
   "stepByStep": {
