@@ -67,7 +67,7 @@ export default function ContactPage() {
       {/* MAIN CONTENT */}
       <section className="section" style={{ background: 'var(--gray)' }}>
         <div className="container">
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '3rem', alignItems: 'start' }}>
+          <div className="contact-grid" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '3rem', alignItems: 'start' }}>
 
             {/* FORM */}
             <div className="card" style={{ padding: '2.5rem' }}>
